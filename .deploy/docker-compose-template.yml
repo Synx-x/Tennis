@@ -6,7 +6,7 @@ services:
     network_mode: bridge
     ports:
       - "80"
-      - "443:80"
+      - "443"
     environment:
       VIRTUAL_HOST: ${HOST_DOMAIN}
       LETSENCRYPT_HOST: ${HOST_DOMAIN}
