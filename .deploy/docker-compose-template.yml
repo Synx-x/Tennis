@@ -5,7 +5,6 @@ services:
     restart: always
     network_mode: bridge
     ports:
-      - "80"
       - "443"
     environment:
       VIRTUAL_HOST: ${HOST_DOMAIN}
