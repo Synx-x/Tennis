@@ -27,6 +27,9 @@ public class AppHost : AppHostBase, IHostingStartup
             "http://localhost:5000",
             "http://localhost:3000",
             "https://localhost:5001",
+            "https://178.128.138.18",
+            "https://178.128.138.18/",
+            "https://webapp.webhut.ml",
             "https://" + Environment.GetEnvironmentVariable("DEPLOY_CDN")
         }, allowCredentials:true));
 
