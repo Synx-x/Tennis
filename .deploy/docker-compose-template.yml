@@ -6,7 +6,6 @@ services:
     network_mode: bridge
     ports:
       - "443"
-      - "80"
     volumes:
         - ./data/nginx-conf/nginx.conf:/etc/nginx/nginx.conf
         - ./data/nginx:/etc/nginx/conf.d
