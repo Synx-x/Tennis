@@ -1,4 +1,3 @@
-version: "3.3"
 services:
   ${APP_NAME}:
     image: ghcr.io/${IMAGE_REPO}:${RELEASE_VERSION}
@@ -13,15 +12,3 @@ services:
       LETSENCRYPT_EMAIL: ${LETSENCRYPT_EMAIL}
       DEPLOY_API: ${DEPLOY_API}
       DEPLOY_CDN: ${DEPLOY_CDN}
-
-  nginx-proxy-letsencrypt:
-    image: jrcs/letsencrypt-nginx-proxy-companion
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock:ro
-    volumes_from:
-      - nginx-proxy
-  whoami:
-    image: jwilder/whoami
-    environment:
-      - VIRTUAL_HOST=${HOST_DOMAIN}
-      - LETSENCRYPT_HOST=${HOST_DOMAIN}
