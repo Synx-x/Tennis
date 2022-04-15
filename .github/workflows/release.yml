@@ -36,6 +36,7 @@ jobs:
         run: |
           echo "deploy_api=${{ secrets.DEPLOY_API }}" >> $GITHUB_ENV
           echo "deploy_cdn=${{ secrets.DEPLOY_CDN }}" >> $GITHUB_ENV
+          git config --global --add safe.directory /github/workspace/api/MyApp/wwwroot
 
       - name: Replace Prod API and CDN URLs
         run: |
