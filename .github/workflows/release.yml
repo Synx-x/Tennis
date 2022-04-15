@@ -93,6 +93,7 @@ jobs:
         run: |
           cd ./api/MyApp/wwwroot
           git init
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
           git add -A
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
