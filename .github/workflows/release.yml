@@ -91,9 +91,10 @@ jobs:
       - name: Deploy to GitHub Pages
         if: ${{ env.deploy_cdn != '' }}
         run: |
-          cd ./github
+          cd ./
           sudo git config --global --add safe.directory ./github/workspace/api/MyApp/wwwroot
           cd ./api/MyApp/wwwroot
+          sudo git config --global --add safe.directory ./api/MyApp/wwwroot
           git init
           git add -A
           git config --local user.email "action@github.com"
