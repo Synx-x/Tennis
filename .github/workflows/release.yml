@@ -23,6 +23,12 @@ jobs:
     if: ${{ github.event.workflow_run.conclusion != 'failure' }}
     steps:
       # Checkout latest or specific tag
+      - name: adding github workspace as safe directory
+        run: git config --global --add safe.directory $GITHUB_WORKSPACE
+      - name: checkout on branch
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
       - name: checkout
         if: ${{ github.event.inputs.version == '' || github.event.inputs.version == 'latest' }}
         uses: actions/checkout@v2
