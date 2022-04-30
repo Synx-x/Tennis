@@ -1,0 +1,22 @@
+.heroContainer {
+    display: flex;
+    height: calc(100vh - 3.75rem);
+    width: 100%;
+    background-color: hotpink;
+
+    section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    section:nth-child(1) {
+        flex-direction: column;
+
+        h1 {
+            text-align: center;
+        }
+    }
+
+}

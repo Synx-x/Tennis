@@ -1,0 +1,97 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+/**
+ * Set up a decent box model on the root element
+   this is meant to be part of every page as a default import
+ */
+@import "../vendors/_normalize.scss";
+
+html {
+  box-sizing: border-box;
+}
+:root, html {
+    --nav-size: 3.75rem;
+    --border: .0625rem solid #474a4d;
+    --border-radius: .5rem;
+    --speed: 500ms;
+    --button-size: calc(var(--nav-size) * 0.5);
+    --shadowIntensity: 0.15;
+    //color scheme
+    --primary-color: #fff;
+    --brand-color: #0095D3;
+    --background-color: #f7f7f7;
+    --text-color: #484848;
+    --text-color-body: #858585;
+    --light-grey: #8e8e8e;
+    --mid-grey: #616161;
+    --dark-grey: #373737;
+    --nav-bg: transparent;
+    --skeleton-bg: #dbdbdb;
+    --scrollbar-bg: white;
+    --scrollbar-track-bg: #efefef;
+    --grey: #b5b5b55c;
+    --button-background: #fafafa;
+    --color-scheme: light;
+}
+//light mode
+:root:not([data-theme="dark"]) {
+    --theme: light;
+    --background-color: #f7f7f7;
+    --primary-color: #fff;
+    --text-color: #484848;
+    --text-color-body: #858585;
+    --box-shadow: 0px 3px 10px 1px rgba(158, 172, 213, var(--shadowIntensity));
+    --box-shadow-2: 0px 2px 80px -40px #9eacd5;
+    --box-shadow-3: 0px 5px 40px -20px #9eacd5;
+    --scrollbar-bg: white;
+    --scrollbar-track-bg: #efefef;
+    --progressbar-bg: #ededed;
+    --nav-bg: transparent;
+    --skeleton-bg: #dbdbdb;
+    --grey: #b5b5b55c;
+    --button-background: #fafafa;
+    --color-scheme: light;
+}
+
+//darkmode
+:root[data-theme="dark"] {
+    --theme: dark;
+    //--background-color: #141414;
+    --background-color: #1E1E1E;
+    --primary-color: #181818;
+    --text-color: #c1c1c1f5;
+    --text-color-body: #FFFFFF99;
+    --box-shadow: 0px 3px 5px 1px rgba(7, 7, 8,0.50);
+    --box-shadow-2: 0px 3px 30px 1px rgba(7, 7, 8,0.70);
+    --box-shadow-3: 0px 3px 30px 1px rgba(7, 7, 8,0.70);
+    --scrollbar-bg: #2c2c2c;
+    --scrollbar-track-bg: #0e0e0e;
+    --progressbar-bg: #0e0e0e;
+    --nav-bg: #141414;
+    --skeleton-bg: #242323;
+    --grey: #2c2c2c;
+    --button-background: #c2c2c21f;
+    --color-scheme: dark;
+}
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --theme: dark;
+        --background-color: #1E1E1E;
+        --primary-color: #181818;
+        --text-color: #c1c1c1f5;
+        --text-color-body: #FFFFFF99;
+        --box-shadow: 0px 3px 5px 1px rgba(7, 7, 8,0.50);
+        --box-shadow-2: 0px 3px 30px 1px rgba(7, 7, 8,0.70);
+        --box-shadow-3: 0px 3px 30px 1px rgba(7, 7, 8,0.70);
+        --scrollbar-bg: #2c2c2c;
+        --scrollbar-track-bg: #0e0e0e;
+        --progressbar-bg: #0e0e0e;
+        --nav-bg: #141414;
+        --skeleton-bg: #242323;
+        --grey: #2c2c2c;
+        --button-background: #c2c2c21f;
+        --color-scheme: dark;
+    }
+}

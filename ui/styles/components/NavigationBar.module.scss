@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 3.75rem;
+    width: 100%;
+    background-color: grey;
+
+    ul {
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: space-between;
+
+        li {
+            list-style-type: none;
+        }
+    }
+}
