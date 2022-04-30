@@ -24,7 +24,8 @@ jobs:
     steps:
       # Checkout latest or specific tag
       - name: adding github workspace as safe directory
-        run: git config --global --add safe.directory $GITHUB_WORKSPACE
+        run: git config --global --add safe.directory /github/workspace/api/MyApp/wwwroot
+        #run: git config --global --add safe.directory $GITHUB_WORKSPACE
       - name: checkout on branch
         uses: actions/checkout@v2
         with:
