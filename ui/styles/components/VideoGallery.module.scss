@@ -6,7 +6,6 @@
     flex-direction  : column;
     justify-content : space-around;
     background-image: url('../../public/assets/img/galleryBackground.svg');
-    padding         : var(--size-fluid-3);
 }
 
 .galleryHeader{
@@ -33,6 +32,12 @@
 
 
 @media (max-width: 850px){
+
+    .galleryContainer{
+        padding: var(--size-fluid-3);
+
+    }
+
     .galleryContent{
         flex-direction: column;
     }
