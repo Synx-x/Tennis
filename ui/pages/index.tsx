@@ -1,7 +1,7 @@
 import Hero from "../components/Hero";
 import NavigationBar from "../components/NavigationBar";
+import { Testimonial } from "../components/NewTestimonial";
 import VideoGallery from "../components/VideoGallery";
-import { Testimonial } from "../components/Testimonial";
 import { getAllPosts } from "../lib/api";
 import Post from "../types/post";
 type Props = {
