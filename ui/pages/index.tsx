@@ -1,8 +1,8 @@
 import Hero from "../components/Hero";
 import NavigationBar from "../components/NavigationBar";
+import VideoGallery from "../components/VideoGallery";
 import { getAllPosts } from "../lib/api";
 import Post from "../types/post";
-import styles from "./../styles/index.module.scss";
 type Props = {
   allPosts: Post[];
 };
@@ -12,6 +12,7 @@ const Index = () => {
     <>
       <NavigationBar />
       <Hero />
+      <VideoGallery />
     </>
   );
 };

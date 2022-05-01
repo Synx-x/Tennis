@@ -5,11 +5,17 @@ const Hero = () => {
   return (
     <>
       <div className={styles.heroContainer}>
-        <section>
+        <section className={styles.heroText}>
           <h1>Welcome to Stephens Tennis Academy</h1>
           <h2>Catchy Slogan Goes Here</h2>
         </section>
-        <section>Section 2</section>
+
+        <section className={styles.heroGraphic}>
+          <div className={styles.desktopContainer}>
+            <div className={styles.tabletContainer}></div>
+            <div className={styles.mobileContainer}></div>
+          </div>
+        </section>
       </div>
     </>
   );
