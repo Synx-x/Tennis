@@ -2,7 +2,7 @@ import React from "react";
 import styles from "../styles/components/Testimonials.module.scss";
 import TestimonialCard from "./TestimonialCard";
 
-const Testimonials = () => {
+const Testimonial = () => {
   return (
     <div className={styles.testimonialContainer}>
       <div className={styles.testimonialHeader}>
@@ -19,4 +19,4 @@ const Testimonials = () => {
   );
 };
 
-export default Testimonials;
+export default Testimonial;
