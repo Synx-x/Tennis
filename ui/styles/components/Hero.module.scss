@@ -45,21 +45,25 @@
   flex-direction: column;
 
   h1 {
-    text-align: center;
-    font-size : var(--font-size-fluid-3);
-    color     : var(--blue-9);
+    text-align    : center;
+    font-size     : var(--font-size-fluid-3);
+    color         : var(--blue-9);
+    font-weight   : 700;
+    letter-spacing: 2px;
   }
 
   h2 {
-    text-align: center;
-    font-size : var(--font-size-fluid-2);
-    color     : var(--green-8);
+    text-align    : center;
+    font-size     : var(--font-size-fluid-1);
+    font-weight   : 400;
+    letter-spacing: 2px;
+    //color         : var(--green-8);
   }
 }
 
 @media (max-width: 850px) {
   .heroContainer {
-    flex-direction: column-reverse;
+    flex-direction : column-reverse;
     justify-content: center;
     
     section {
