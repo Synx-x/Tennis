@@ -1,9 +1,11 @@
 .testimonialContainer{
     display            : flex;
-    height             : 80vh;
+    flex-direction     : column;
+    min-height         : 80vh;
     max-width          : 100rem;
-    padding: var(--size-fluid-3);
+    padding            : var(--size-fluid-3);
     margin             : 0 auto;
+    justify-content    : space-evenly;
     background-image   : url('../../public/assets/img/testimonialsMap.svg');
     background-position: center;
 }
@@ -21,4 +23,11 @@
         text-transform: uppercase;
         color         : var(--green-8);
     }
+}
+
+.testimonialContent{
+    display              : grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, max-content));
+    justify-content      : center;
+    gap                  : 1rem;
 }

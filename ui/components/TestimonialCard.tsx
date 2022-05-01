@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../styles/components/TestimonialCard.module.scss";
+import { StarIcon } from "../universalComponents/Icons";
 
 const TestimonialCard = () => {
   return (
@@ -7,7 +8,7 @@ const TestimonialCard = () => {
       <div className={styles.testimonialCardHeader}>
         <a>😂</a>
         <h3>John Doe</h3>
-        <a>5 stars</a>
+        <a>{Array(5).fill(<StarIcon />)}</a>
       </div>
 
       <div className={styles.testimonialCardContent}>

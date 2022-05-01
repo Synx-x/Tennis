@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../styles/components/Testimonials.module.scss";
+import TestimonialCard from "./TestimonialCard";
 
 const Testimonials = () => {
   return (
@@ -9,7 +10,11 @@ const Testimonials = () => {
         <h2>See The Change</h2>
       </div>
 
-      <div className={styles.testimonialContent}></div>
+      <div className={styles.testimonialContent}>
+        <TestimonialCard />
+        <TestimonialCard />
+        <TestimonialCard />
+      </div>
     </div>
   );
 };
