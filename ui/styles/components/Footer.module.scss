@@ -1,0 +1,35 @@
+@import '../componentPartials/typography/headings';
+
+.footerContainer{
+    display        : flex;
+    flex-direction : column;
+    height         : 50vh;
+    width          : 100%;
+    max-width      : 1400px;
+    justify-content: space-between;
+    margin         : 0 auto;
+}
+
+.footerInfo{
+    text-align    : center;
+    display       : flex;
+    place-items   : center;
+    flex-direction: column;
+
+
+        h2{
+            @include heading(h2);
+        }
+}
+
+.footerMain{
+    display        : flex;
+    justify-content: space-between;
+    border-top     : 2px solid #eee;
+    padding        : 2.5rem 0rem;
+    padding-bottom : 10rem;
+
+    a{
+        width: 300px;
+    }
+}

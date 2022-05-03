@@ -1,3 +1,5 @@
+@import '../componentPartials/systemComponents/button';
+
 .container {
     display       : flex;
     flex-direction: column;
@@ -6,7 +8,7 @@
     max-width     : 100rem;
     margin        : 0 auto;
     //border-bottom : 2px solid var(--green-8);
-    padding       : var(--size-fluid-3);
+    padding: var(--size-fluid-3);
 
     ul {
         display        : flex;
@@ -18,7 +20,19 @@
         li {
             list-style-type: none;
             font-weight    : 600;
-            letter-spacing: 2px;
+            letter-spacing : 2px;
+
+            button{
+                font-weight   : initial;
+                letter-spacing: initial;
+                @include button();
+            }
         }
     }
+}
+
+.menuItems{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }

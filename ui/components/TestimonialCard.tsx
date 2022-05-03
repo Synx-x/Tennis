@@ -1,12 +1,14 @@
 import React from "react";
 import styles from "../styles/components/TestimonialCard.module.scss";
-import { StarIcon } from "../universalComponents/Icons";
+import { FaceIcon, StarIcon } from "../universalComponents/Icons";
 
 const TestimonialCard = () => {
   return (
     <div className={styles.testimonialCardContainer}>
       <div className={styles.testimonialCardHeader}>
-        <a>😂</a>
+        <a>
+          <FaceIcon />
+        </a>
         <h3>John Doe</h3>
         <a>{Array(5).fill(<StarIcon />)}</a>
       </div>

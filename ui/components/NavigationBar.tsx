@@ -6,9 +6,13 @@ const NavigationBar = () => {
     <nav className={styles.container}>
       <ul>
         <li>logo</li>
-        <li>Home</li>
-        <li>Video Library</li>
-        <li>Login</li>
+        <div className={styles.menuItems}>
+          <li>Home</li>
+          <li>Video Library</li>
+        </div>
+        <li>
+          <button>Login</button>
+        </li>
       </ul>
     </nav>
   );

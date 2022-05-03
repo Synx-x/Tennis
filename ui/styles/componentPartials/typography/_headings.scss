@@ -1,0 +1,13 @@
+@mixin heading($type: h1){
+
+    @if $type == h1 {
+        font-weight   : 700;
+        letter-spacing: 2px;
+        font-size     : var(--font-size-fluid-3);
+    }
+
+    @else if $type == h2 {
+        font-weight   : 400;
+        letter-spacing: 2px;
+    }
+}
