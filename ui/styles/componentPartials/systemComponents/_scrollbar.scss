@@ -1,11 +1,10 @@
 @mixin scrollbar() {
     &::-webkit-scrollbar-thumb {
         all: unset;
-        background-color: whitesmoke;
+        background-color: var(--gray);
         border: 5px solid transparent;
         border-radius: 50px;
         background-clip: content-box;
-        //box-shadow: rgba(107, 107, 107, .25) 0px 25px 55px;
         cursor: pointer;
 
         @media (prefers-color-scheme: dark) {

@@ -1,8 +1,10 @@
 .galleryContainer{
     display         : flex;
     align-items     : center;
-    min-height      : 80vh;
+    min-height      : 48rem;
     height          : 0;
+    margin          : 0 auto;
+    max-width       : 2440px;
     flex-direction  : column;
     justify-content : space-around;
     background-image: url('../../public/assets/img/galleryBackground.svg');
@@ -35,10 +37,19 @@
 
     .galleryContainer{
         padding: var(--size-fluid-3);
-
+        height: unset;
+        min-height: unset;
+        gap: 5rem;
     }
 
     .galleryContent{
         flex-direction: column;
+        gap: 5rem;
     }
+
+    .galleryHeader{
+        h2{
+            font-size: var(--font-size-fluid-2);
+        }
     }
+}
