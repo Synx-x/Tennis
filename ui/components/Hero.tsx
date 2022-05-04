@@ -12,8 +12,28 @@ const Hero = () => {
 
         <section className={styles.heroGraphic}>
           <div className={styles.desktopContainer}>
-            <div className={styles.tabletContainer}></div>
-            <div className={styles.mobileContainer}></div>
+            <video autoPlay muted loop>
+              <source
+                src="https://www.w3schools.com/html/mov_bbb.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <div className={styles.tabletContainer}>
+              <video autoPlay muted loop>
+                <source
+                  src="https://www.w3schools.com/html/mov_bbb.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+            <div className={styles.mobileContainer}>
+              <video autoPlay muted loop>
+                <source
+                  src="https://www.w3schools.com/html/mov_bbb.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
           </div>
         </section>
       </div>

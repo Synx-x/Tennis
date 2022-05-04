@@ -5,10 +5,9 @@
     flex-direction: column;
     height        : 3.75rem;
     width         : 100%;
-    max-width     : 100rem;
+    max-width     : 1400px;
     margin        : 0 auto;
-    //border-bottom : 2px solid var(--green-8);
-    padding: var(--size-fluid-3);
+    padding       : var(--size-fluid-3);
 
     ul {
         display        : flex;
@@ -33,7 +32,7 @@
 }
 
 .menuItems{
-    display: flex;
+    display    : flex;
     align-items: center;
-    gap: 1rem;
+    gap        : 1rem;
 }
