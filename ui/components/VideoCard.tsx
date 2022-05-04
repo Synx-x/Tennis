@@ -5,7 +5,7 @@ const VideoCard = () => {
   return (
     <div className={styles.cardContainer}>
       <div className={styles.cardSnippet}>
-        <video muted loop>
+        <video autoPlay muted loop>
           <source
             src="https://www.w3schools.com/html/mov_bbb.mp4"
             type="video/mp4"
