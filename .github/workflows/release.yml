@@ -23,13 +23,6 @@ jobs:
     if: ${{ github.event.workflow_run.conclusion != 'failure' }}
     steps:
       # Checkout latest or specific tag
-      - name: adding github workspace as safe directory
-        #run: git config --global --add safe.directory ./api/MyApp/wwwroot
-        run: git config --global --add safe.directory $GITHUB_WORKSPACE
-      - name: checkout on branch
-        uses: actions/checkout@v2
-        with:
-          ref: ${{ github.head_ref }}
       - name: checkout
         if: ${{ github.event.inputs.version == '' || github.event.inputs.version == 'latest' }}
         uses: actions/checkout@v2
@@ -43,7 +36,7 @@ jobs:
         run: |
           echo "deploy_api=${{ secrets.DEPLOY_API }}" >> $GITHUB_ENV
           echo "deploy_cdn=${{ secrets.DEPLOY_CDN }}" >> $GITHUB_ENV
-          
+
       - name: Replace Prod API and CDN URLs
         run: |
           sed -i 's/$DEPLOY_API/${{ env.deploy_api }}/g' ./ui/next.config.js
@@ -93,7 +86,7 @@ jobs:
           context: .
           push: true
           tags: ghcr.io/${{ env.image_repository_name }}:${{ env.TAG_NAME }}
-          
+
       # Deploy UI to GitHub Pages
       - name: Deploy to GitHub Pages
         if: ${{ env.deploy_cdn != '' }}
@@ -152,8 +145,8 @@ jobs:
         with:
           host: ${{ secrets.DEPLOY_API }}
           username: ${{ secrets.DEPLOY_USERNAME }}
-          password: ${{ secrets.DEPLOY_PASSWORD }}
           port: 22
+          key: ${{ secrets.DEPLOY_KEY }}
           source: ".deploy/${{ github.event.repository.name }}-docker-compose.yml"
           target: "~/"
 
@@ -166,7 +159,7 @@ jobs:
         with:
           host: ${{ secrets.DEPLOY_API }}
           username: ${{ secrets.DEPLOY_USERNAME }}
-          password: ${{ secrets.DEPLOY_PASSWORD }}
+          key: ${{ secrets.DEPLOY_KEY }}
           port: 22
           envs: APPTOKEN,USERNAME
           script: |
