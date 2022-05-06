@@ -13,7 +13,7 @@ const Footer = () => {
         </p>
       </div>
       <footer className={styles.footerMain}>
-        <a>Logo</a>
+        <a href="/">Logo</a>
         <p>© 2022 Stephen Cross. All Rights Reserved. </p>
         <menu>
           <li>Facebook</li>
