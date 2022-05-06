@@ -1,5 +1,5 @@
 import React from "react";
-import Footer from "../components/Footer";
+import { Footer1 as Footer } from "../components/Footer";
 import NavigationBar from "../components/NavigationBar";
 import VideoGallery from "../components/VideoLibrary/VideoGallery";
 import Hero from "../components/VideoLibrary/Hero";

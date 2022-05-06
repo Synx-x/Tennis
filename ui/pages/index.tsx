@@ -1,5 +1,5 @@
 import CalltoAction from "../components/CalltoAction";
-import { Footer } from "../components/Footer";
+import { Footer1 as Footer } from "../components/Footer";
 import Hero from "../components/Hero";
 import NavigationBar from "../components/NavigationBar";
 import { Testimonial } from "../components/NewTestimonial";
