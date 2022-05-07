@@ -1,5 +1,5 @@
 import React from "react";
-import { Footer1 } from "../components/Footer1";
+import Footer from "../components/Footer";
 import NavigationBar from "../components/NavigationBar";
 import VideoGallery from "../components/VideoLibrary/VideoGallery";
 import Hero from "../components/VideoLibrary/Hero";
@@ -11,7 +11,7 @@ const VideoLibrary = () => {
       <NavigationBar />
       <Hero />
       <VideoGallery />
-      <Footer1 />
+      <Footer />
     </>
   );
 };

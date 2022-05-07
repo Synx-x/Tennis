@@ -1,5 +1,5 @@
 import CalltoAction from "../components/CalltoAction";
-import { Footer1 } from "../components/Footer1";
+import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import NavigationBar from "../components/NavigationBar";
 import { Testimonial } from "../components/NewTestimonial";
@@ -18,7 +18,7 @@ const Index = () => {
       <VideoGallery />
       <Testimonial />
       <CalltoAction />
-      <Footer1 />
+      <Footer />
     </>
   );
 };
