@@ -6,23 +6,15 @@ import Hero from "../components/VideoLibrary/Hero";
 import "../styles/global/scrollbarOverlay.module.scss";
 
 const VideoLibrary = () => {
-  <style global jsx>{`
-    html,
-    body {
-      overflow: overlay;
-    }
-  `}</style>;
-
-  useEffect(() => {
-    const body = document.querySelector("body");
-    document.body.classList.add("overlay");
-    return () => {
-      body?.classList.remove("overlay");
-    };
-  });
-
   return (
     <>
+      <style jsx global>{`
+        html,
+        body {
+          overflow: overlay;
+        }
+      `}</style>
+      ;
       <NavigationBar />
       <Hero />
       <VideoGallery />
