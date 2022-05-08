@@ -1287,7 +1287,7 @@ const VideoGallery = () => {
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="#0">
               <figure className={styles.figure}>
                 <picture>
                   <img
