@@ -3,7 +3,7 @@ import styles from "../../styles/components/VideoGallery/videoGallery.module.scs
 import VideoCard from "../VideoCard";
 //import { rovingIndex } from "roving-ux";
 
-const VideoGallery = () => {
+const Gallery = () => {
   //   useEffect(() => {
   //     document
   //       .querySelectorAll(".horizontal-media-scroller")
@@ -884,10 +884,40 @@ const VideoGallery = () => {
           <li>
             <VideoCard />
           </li>
+          <li>
+            <VideoCard />
+          </li>
+          <li>
+            <VideoCard />
+          </li>
+          <li>
+            <VideoCard />
+          </li>
+          <li>
+            <VideoCard />
+          </li>
+          <li>
+            <VideoCard />
+          </li>
+          <li>
+            <VideoCard />
+          </li>
+          <li>
+            <VideoCard />
+          </li>
+          <li>
+            <VideoCard />
+          </li>
+          <li>
+            <VideoCard />
+          </li>
+          <li>
+            <VideoCard />
+          </li>
         </ul>
       </div>
     </div>
   );
 };
 
-export default VideoGallery;
+export default Gallery;
