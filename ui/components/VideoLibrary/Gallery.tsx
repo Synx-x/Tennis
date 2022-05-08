@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import styles from "../../styles/components/VideoGallery/videoGallery.module.scss";
+import styles from "../../styles/components/VideoGallery/Gallery.module.scss";
 import VideoCard from "../VideoCard";
 //import { rovingIndex } from "roving-ux";
 

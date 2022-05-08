@@ -14,7 +14,7 @@ const VideoLibrary = () => {
           overflow: overlay;
         }
       `}</style>
-      ;
+
       <NavigationBar />
       <Hero />
       <VideoGallery />
