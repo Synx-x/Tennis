@@ -17,7 +17,7 @@ const VideoLibrary = () => {
     const body = document.querySelector("body");
     document.body.classList.add("overlay");
     return () => {
-      body.classList.remove("overlay");
+      body?.classList.remove("overlay");
     };
   });
 
