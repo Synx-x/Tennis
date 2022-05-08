@@ -36,7 +36,7 @@ jobs:
         run: |
           echo "deploy_api=${{ secrets.DEPLOY_API }}" >> $GITHUB_ENV
           echo "deploy_cdn=${{ secrets.DEPLOY_CDN }}" >> $GITHUB_ENV
-
+          
       - name: Replace Prod API and CDN URLs
         run: |
           sed -i 's/$DEPLOY_API/${{ env.deploy_api }}/g' ./ui/next.config.js
@@ -86,7 +86,7 @@ jobs:
           context: .
           push: true
           tags: ghcr.io/${{ env.image_repository_name }}:${{ env.TAG_NAME }}
-
+          
       # Deploy UI to GitHub Pages
       - name: Deploy to GitHub Pages
         if: ${{ env.deploy_cdn != '' }}
@@ -145,8 +145,8 @@ jobs:
         with:
           host: ${{ secrets.DEPLOY_API }}
           username: ${{ secrets.DEPLOY_USERNAME }}
+          password: ${{ secrets.DEPLOY_PASSWORD }}
           port: 22
-          key: ${{ secrets.DEPLOY_KEY }}
           source: ".deploy/${{ github.event.repository.name }}-docker-compose.yml"
           target: "~/"
 
@@ -159,7 +159,7 @@ jobs:
         with:
           host: ${{ secrets.DEPLOY_API }}
           username: ${{ secrets.DEPLOY_USERNAME }}
-          key: ${{ secrets.DEPLOY_KEY }}
+          password: ${{ secrets.DEPLOY_PASSWORD }}
           port: 22
           envs: APPTOKEN,USERNAME
           script: |
