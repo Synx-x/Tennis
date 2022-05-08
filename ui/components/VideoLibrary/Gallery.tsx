@@ -21,8 +21,43 @@ const Gallery = () => {
         <header>
           <h2>Intro to Tennis Equipment</h2>
         </header>
-
+        
         <ul className={styles.horizontalMediaScroller}>
+          <li>
+            <VideoCard />
+          </li>
+          <li>
+            <VideoCard />
+          </li>
+          <li>
+            <VideoCard />
+          </li>
+          <li>
+            <VideoCard />
+          </li>
+          <li>
+            <VideoCard />
+          </li>
+          <li>
+            <VideoCard />
+          </li>
+          <li>
+            <VideoCard />
+          </li>
+          <li>
+            <VideoCard />
+          </li>
+          <li>
+            <VideoCard />
+          </li>
+          <li>
+            <VideoCard />
+          </li>
+          <li>
+            <VideoCard />
+          </li>
+        </ul>
+        {/* <ul className={styles.horizontalMediaScroller}>
           <li>
             <a href="#">
               <figure className={styles.figure}>
@@ -443,7 +478,7 @@ const Gallery = () => {
               </figure>
             </a>
           </li>
-        </ul>
+        </ul> */}
       </div>
 
       <div className={styles.gallerySection}>

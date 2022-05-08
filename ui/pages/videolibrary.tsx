@@ -8,12 +8,14 @@ import "../styles/global/scrollbarOverlay.module.scss";
 const VideoLibrary = () => {
   return (
     <>
-      <style jsx global>{`
-        html,
-        body {
-          overflow: overlay;
-        }
-      `}</style>
+      <style jsx global>
+        {`
+          html,
+          body {
+            overflow: overlay;
+          }
+        `}
+      </style>
 
       <NavigationBar />
       <Hero />
