@@ -1,6 +1,6 @@
 @import '../componentPartials/systemComponents/button';
 
-.container {
+@mixin containerBase(){
     display       : flex;
     flex-direction: column;
     height        : 3.75rem;
@@ -29,6 +29,19 @@
             }
         }
     }
+}
+
+.container {
+ @include containerBase();
+}
+
+.galleryContainer{
+    @include containerBase();
+    position: absolute;
+    left    : 0;
+    right   : 0;
+    z-index : 1;
+
 }
 
 .menuItems{

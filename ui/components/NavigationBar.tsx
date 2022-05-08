@@ -1,9 +1,19 @@
 import React from "react";
 import styles from "./../styles/components/NavigationBar.module.scss";
+import { useRouter } from "next/router";
 
 const NavigationBar = () => {
+  const router = useRouter();
+  console.log("navigationBar", router.pathname);
+
   return (
-    <nav className={styles.container}>
+    <nav
+      className={
+        router.pathname === "/videolibrary"
+          ? styles.galleryContainer
+          : styles.container
+      }
+    >
       <ul>
         <li>
           <a href="/">logo</a>

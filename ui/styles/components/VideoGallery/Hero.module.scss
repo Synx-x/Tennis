@@ -19,5 +19,6 @@
         transform: translate(-50%, -50%);
         font-size: var(--font-size-6);
         @include heading(h2);
+        color: white;
     }
 }
