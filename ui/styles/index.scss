@@ -2,8 +2,8 @@
 @import './componentPartials/systemComponents/scrollbar';
 
 html{
-    --gray-9: #141414;
-    --green-8: #22b33f;
+    --gray-9: #0d0e0e;
+    --green-8: #0ece35;
     --gray: #b5b5b55c;
 
     @include scrollbar-1();

@@ -6,7 +6,7 @@ const Hero = () => {
     <section className={styles.container}>
       <video autoPlay muted loop>
         <source
-          src="https://www.w3schools.com/html/mov_bbb.mp4"
+          src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
           type="video/mp4"
         />
       </video>
