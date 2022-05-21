@@ -1,63 +1,63 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styles from "../../styles/components/VideoGallery/Gallery.module.scss";
 import VideoCard from "../VideoCard";
 //import { rovingIndex } from "roving-ux";
 
 const Gallery = () => {
-  //   useEffect(() => {
-  //     document
-  //       .querySelectorAll(".horizontal-media-scroller")
-  //       .forEach((scroller) =>
-  //         rovingIndex({
-  //           element: scroller,
-  //           target: "a",
-  //         })
-  //       );
-  //   }, []);
+	//   useEffect(() => {
+	//     document
+	//       .querySelectorAll(".horizontal-media-scroller")
+	//       .forEach((scroller) =>
+	//         rovingIndex({
+	//           element: scroller,
+	//           target: "a",
+	//         })
+	//       );
+	//   }, []);
 
-  return (
-    <div className={styles.container}>
-      <div className={styles.gallerySection}>
-        <header>
-          <h2>Intro to Tennis Equipment</h2>
-        </header>
-        
-        <ul className={styles.horizontalMediaScroller}>
-          <li>
-            <VideoCard />
-          </li>
-          <li>
-            <VideoCard />
-          </li>
-          <li>
-            <VideoCard />
-          </li>
-          <li>
-            <VideoCard />
-          </li>
-          <li>
-            <VideoCard />
-          </li>
-          <li>
-            <VideoCard />
-          </li>
-          <li>
-            <VideoCard />
-          </li>
-          <li>
-            <VideoCard />
-          </li>
-          <li>
-            <VideoCard />
-          </li>
-          <li>
-            <VideoCard />
-          </li>
-          <li>
-            <VideoCard />
-          </li>
-        </ul>
-        {/* <ul className={styles.horizontalMediaScroller}>
+	return (
+		<div className={styles.container}>
+			<div className={styles.gallerySection}>
+				<header>
+					<h2>Intro to Tennis Equipment</h2>
+				</header>
+
+				<ul className={styles.horizontalMediaScroller}>
+					<li>
+						<VideoCard />
+					</li>
+					<li>
+						<VideoCard />
+					</li>
+					<li>
+						<VideoCard />
+					</li>
+					<li>
+						<VideoCard />
+					</li>
+					<li>
+						<VideoCard />
+					</li>
+					<li>
+						<VideoCard />
+					</li>
+					<li>
+						<VideoCard />
+					</li>
+					<li>
+						<VideoCard />
+					</li>
+					<li>
+						<VideoCard />
+					</li>
+					<li>
+						<VideoCard />
+					</li>
+					<li>
+						<VideoCard />
+					</li>
+				</ul>
+				{/* <ul className={styles.horizontalMediaScroller}>
           <li>
             <a href="#">
               <figure className={styles.figure}>
@@ -479,480 +479,481 @@ const Gallery = () => {
             </a>
           </li>
         </ul> */}
-      </div>
+			</div>
 
-      <div className={styles.gallerySection}>
-        <header>
-          <h2>Preparing the Court</h2>
-        </header>
+			<div className={styles.gallerySection}>
+				<header>
+					<h2>Preparing the Court</h2>
+				</header>
 
-        <ul className={styles.horizontalMediaScroller}>
-          <li>
-            <a href="#">
-              <figure className={styles.figure}>
-                <picture>
-                  <img
-                    alt="A placeholder image"
-                    loading="lazy"
-                    src="https://picsum.photos/500/500?26"
-                  />
-                </picture>
-                <figcaption>BERLIN STATION</figcaption>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <figure className={styles.figure}>
-                <picture>
-                  <img
-                    alt="A placeholder image"
-                    loading="lazy"
-                    src="https://picsum.photos/500/500?27"
-                  />
-                </picture>
-                <figcaption>Penny Awful: An original series</figcaption>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <figure className={styles.figure}>
-                <picture>
-                  <img
-                    alt="A placeholder image"
-                    loading="lazy"
-                    src="https://picsum.photos/500/500?28"
-                  />
-                </picture>
-                <figcaption>Castle Rock</figcaption>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <figure className={styles.figure}>
-                <picture>
-                  <img
-                    alt="A placeholder image"
-                    loading="lazy"
-                    src="https://picsum.photos/500/500?29"
-                  />
-                </picture>
-                <figcaption>The Walking Dead</figcaption>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <figure className={styles.figure}>
-                <picture>
-                  <img
-                    alt="A placeholder image"
-                    loading="lazy"
-                    src="https://picsum.photos/500/500?210"
-                  />
-                </picture>
-                <figcaption>Fear The Walking Dead</figcaption>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <figure className={styles.figure}>
-                <picture>
-                  <img
-                    alt="A placeholder image"
-                    loading="lazy"
-                    src="https://picsum.photos/500/500?21"
-                  />
-                </picture>
-                <figcaption>Legends</figcaption>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <figure className={styles.figure}>
-                <picture>
-                  <img
-                    alt="A placeholder image"
-                    loading="lazy"
-                    src="https://picsum.photos/500/500?22"
-                  />
-                </picture>
-                <figcaption>The Family</figcaption>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <figure className={styles.figure}>
-                <picture>
-                  <img
-                    alt="A placeholder image"
-                    loading="lazy"
-                    src="https://picsum.photos/500/500?23"
-                  />
-                </picture>
-                <figcaption>Almost Family</figcaption>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <figure className={styles.figure}>
-                <picture>
-                  <img
-                    alt="A placeholder image"
-                    loading="lazy"
-                    src="https://picsum.photos/500/500?24"
-                  />
-                </picture>
-                <figcaption>The Strain</figcaption>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <figure className={styles.figure}>
-                <picture>
-                  <img
-                    alt="A placeholder image"
-                    loading="lazy"
-                    src="https://picsum.photos/500/500?25"
-                  />
-                </picture>
-                <figcaption>The Following</figcaption>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <figure className={styles.figure}>
-                <picture>
-                  <img
-                    alt="A placeholder image"
-                    loading="lazy"
-                    src="https://picsum.photos/500/500?26"
-                  />
-                </picture>
-                <figcaption>BERLIN STATION</figcaption>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <figure className={styles.figure}>
-                <picture>
-                  <img
-                    alt="A placeholder image"
-                    loading="lazy"
-                    src="https://picsum.photos/500/500?27"
-                  />
-                </picture>
-                <figcaption>Penny Dreadful</figcaption>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <figure className={styles.figure}>
-                <picture>
-                  <img
-                    alt="A placeholder image"
-                    loading="lazy"
-                    src="https://picsum.photos/500/500?28"
-                  />
-                </picture>
-                <figcaption>Castle Rock</figcaption>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <figure className={styles.figure}>
-                <picture>
-                  <img
-                    alt="A placeholder image"
-                    loading="lazy"
-                    src="https://picsum.photos/500/500?29"
-                  />
-                </picture>
-                <figcaption>The Walking Dead</figcaption>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <figure className={styles.figure}>
-                <picture>
-                  <img
-                    alt="A placeholder image"
-                    loading="lazy"
-                    src="https://picsum.photos/500/500?210"
-                  />
-                </picture>
-                <figcaption>Fear The Walking Dead</figcaption>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <figure className={styles.figure}>
-                <picture>
-                  <img
-                    alt="A placeholder image"
-                    loading="lazy"
-                    src="https://picsum.photos/500/500?21"
-                  />
-                </picture>
-                <figcaption>Legends</figcaption>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <figure className={styles.figure}>
-                <picture>
-                  <img
-                    alt="A placeholder image"
-                    loading="lazy"
-                    src="https://picsum.photos/500/500?21"
-                  />
-                </picture>
-                <figcaption>Legends</figcaption>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <figure className={styles.figure}>
-                <picture>
-                  <img
-                    alt="A placeholder image"
-                    loading="lazy"
-                    src="https://picsum.photos/500/500?22"
-                  />
-                </picture>
-                <figcaption>The Family</figcaption>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <figure className={styles.figure}>
-                <picture>
-                  <img
-                    alt="A placeholder image"
-                    loading="lazy"
-                    src="https://picsum.photos/500/500?23"
-                  />
-                </picture>
-                <figcaption>Almost Family</figcaption>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <figure className={styles.figure}>
-                <picture>
-                  <img
-                    alt="A placeholder image"
-                    loading="lazy"
-                    src="https://picsum.photos/500/500?24"
-                  />
-                </picture>
-                <figcaption>The Strain</figcaption>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <figure className={styles.figure}>
-                <picture>
-                  <img
-                    alt="A placeholder image"
-                    loading="lazy"
-                    src="https://picsum.photos/500/500?25"
-                  />
-                </picture>
-                <figcaption>The Following</figcaption>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <figure className={styles.figure}>
-                <picture>
-                  <img
-                    alt="A placeholder image"
-                    loading="lazy"
-                    src="https://picsum.photos/500/500?22"
-                  />
-                </picture>
-                <figcaption>The Family</figcaption>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <figure className={styles.figure}>
-                <picture>
-                  <img
-                    alt="A placeholder image"
-                    loading="lazy"
-                    src="https://picsum.photos/500/500?23"
-                  />
-                </picture>
-                <figcaption>Almost Family</figcaption>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <figure className={styles.figure}>
-                <picture>
-                  <img
-                    alt="A placeholder image"
-                    loading="lazy"
-                    src="https://picsum.photos/500/500?24"
-                  />
-                </picture>
-                <figcaption>The Strain</figcaption>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <figure className={styles.figure}>
-                <picture>
-                  <img
-                    alt="A placeholder image"
-                    loading="lazy"
-                    src="https://picsum.photos/500/500?25"
-                  />
-                </picture>
-                <figcaption>The Following</figcaption>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <figure className={styles.figure}>
-                <picture>
-                  <img
-                    alt="A placeholder image"
-                    loading="lazy"
-                    src="https://picsum.photos/500/500?26"
-                  />
-                </picture>
-                <figcaption>BERLIN STATION</figcaption>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <figure className={styles.figure}>
-                <picture>
-                  <img
-                    alt="A placeholder image"
-                    loading="lazy"
-                    src="https://picsum.photos/500/500?27"
-                  />
-                </picture>
-                <figcaption>Penny Dreadful</figcaption>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <figure className={styles.figure}>
-                <picture>
-                  <img
-                    alt="A placeholder image"
-                    loading="lazy"
-                    src="https://picsum.photos/500/500?28"
-                  />
-                </picture>
-                <figcaption>Castle Rock</figcaption>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <figure className={styles.figure}>
-                <picture>
-                  <img
-                    alt="A placeholder image"
-                    loading="lazy"
-                    src="https://picsum.photos/500/500?29"
-                  />
-                </picture>
-                <figcaption>The Walking Dead</figcaption>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <figure className={styles.figure}>
-                <picture>
-                  <img
-                    alt="A placeholder image"
-                    loading="lazy"
-                    src="https://picsum.photos/500/500?210"
-                  />
-                </picture>
-                <figcaption>Fear The Walking Dead</figcaption>
-              </figure>
-            </a>
-          </li>
-        </ul>
-      </div>
+				<ul className={styles.horizontalMediaScroller}>
+					<li>
+						<GalleryItem
+							imgsrc="https://picsum.photos/500/500?26"
+							caption="BERLIN STATION"
+						/>
+					</li>
+					<li>
+						<GalleryItem
+							imgsrc="https://picsum.photos/500/500?27"
+							caption="Penny Awful: An original series"
+						/>
+					</li>
+					<li>
+						<a href="#">
+							<figure className={styles.figure}>
+								<picture>
+									<img
+										alt="A placeholder image"
+										loading="lazy"
+										src="https://picsum.photos/500/500?28"
+									/>
+								</picture>
+								<figcaption>Castle Rock</figcaption>
+							</figure>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<figure className={styles.figure}>
+								<picture>
+									<img
+										alt="A placeholder image"
+										loading="lazy"
+										src="https://picsum.photos/500/500?29"
+									/>
+								</picture>
+								<figcaption>The Walking Dead</figcaption>
+							</figure>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<figure className={styles.figure}>
+								<picture>
+									<img
+										alt="A placeholder image"
+										loading="lazy"
+										src="https://picsum.photos/500/500?210"
+									/>
+								</picture>
+								<figcaption>Fear The Walking Dead</figcaption>
+							</figure>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<figure className={styles.figure}>
+								<picture>
+									<img
+										alt="A placeholder image"
+										loading="lazy"
+										src="https://picsum.photos/500/500?21"
+									/>
+								</picture>
+								<figcaption>Legends</figcaption>
+							</figure>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<figure className={styles.figure}>
+								<picture>
+									<img
+										alt="A placeholder image"
+										loading="lazy"
+										src="https://picsum.photos/500/500?22"
+									/>
+								</picture>
+								<figcaption>The Family</figcaption>
+							</figure>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<figure className={styles.figure}>
+								<picture>
+									<img
+										alt="A placeholder image"
+										loading="lazy"
+										src="https://picsum.photos/500/500?23"
+									/>
+								</picture>
+								<figcaption>Almost Family</figcaption>
+							</figure>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<figure className={styles.figure}>
+								<picture>
+									<img
+										alt="A placeholder image"
+										loading="lazy"
+										src="https://picsum.photos/500/500?24"
+									/>
+								</picture>
+								<figcaption>The Strain</figcaption>
+							</figure>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<figure className={styles.figure}>
+								<picture>
+									<img
+										alt="A placeholder image"
+										loading="lazy"
+										src="https://picsum.photos/500/500?25"
+									/>
+								</picture>
+								<figcaption>The Following</figcaption>
+							</figure>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<figure className={styles.figure}>
+								<picture>
+									<img
+										alt="A placeholder image"
+										loading="lazy"
+										src="https://picsum.photos/500/500?26"
+									/>
+								</picture>
+								<figcaption>BERLIN STATION</figcaption>
+							</figure>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<figure className={styles.figure}>
+								<picture>
+									<img
+										alt="A placeholder image"
+										loading="lazy"
+										src="https://picsum.photos/500/500?27"
+									/>
+								</picture>
+								<figcaption>Penny Dreadful</figcaption>
+							</figure>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<figure className={styles.figure}>
+								<picture>
+									<img
+										alt="A placeholder image"
+										loading="lazy"
+										src="https://picsum.photos/500/500?28"
+									/>
+								</picture>
+								<figcaption>Castle Rock</figcaption>
+							</figure>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<figure className={styles.figure}>
+								<picture>
+									<img
+										alt="A placeholder image"
+										loading="lazy"
+										src="https://picsum.photos/500/500?29"
+									/>
+								</picture>
+								<figcaption>The Walking Dead</figcaption>
+							</figure>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<figure className={styles.figure}>
+								<picture>
+									<img
+										alt="A placeholder image"
+										loading="lazy"
+										src="https://picsum.photos/500/500?210"
+									/>
+								</picture>
+								<figcaption>Fear The Walking Dead</figcaption>
+							</figure>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<figure className={styles.figure}>
+								<picture>
+									<img
+										alt="A placeholder image"
+										loading="lazy"
+										src="https://picsum.photos/500/500?21"
+									/>
+								</picture>
+								<figcaption>Legends</figcaption>
+							</figure>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<figure className={styles.figure}>
+								<picture>
+									<img
+										alt="A placeholder image"
+										loading="lazy"
+										src="https://picsum.photos/500/500?21"
+									/>
+								</picture>
+								<figcaption>Legends</figcaption>
+							</figure>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<figure className={styles.figure}>
+								<picture>
+									<img
+										alt="A placeholder image"
+										loading="lazy"
+										src="https://picsum.photos/500/500?22"
+									/>
+								</picture>
+								<figcaption>The Family</figcaption>
+							</figure>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<figure className={styles.figure}>
+								<picture>
+									<img
+										alt="A placeholder image"
+										loading="lazy"
+										src="https://picsum.photos/500/500?23"
+									/>
+								</picture>
+								<figcaption>Almost Family</figcaption>
+							</figure>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<figure className={styles.figure}>
+								<picture>
+									<img
+										alt="A placeholder image"
+										loading="lazy"
+										src="https://picsum.photos/500/500?24"
+									/>
+								</picture>
+								<figcaption>The Strain</figcaption>
+							</figure>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<figure className={styles.figure}>
+								<picture>
+									<img
+										alt="A placeholder image"
+										loading="lazy"
+										src="https://picsum.photos/500/500?25"
+									/>
+								</picture>
+								<figcaption>The Following</figcaption>
+							</figure>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<figure className={styles.figure}>
+								<picture>
+									<img
+										alt="A placeholder image"
+										loading="lazy"
+										src="https://picsum.photos/500/500?22"
+									/>
+								</picture>
+								<figcaption>The Family</figcaption>
+							</figure>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<figure className={styles.figure}>
+								<picture>
+									<img
+										alt="A placeholder image"
+										loading="lazy"
+										src="https://picsum.photos/500/500?23"
+									/>
+								</picture>
+								<figcaption>Almost Family</figcaption>
+							</figure>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<figure className={styles.figure}>
+								<picture>
+									<img
+										alt="A placeholder image"
+										loading="lazy"
+										src="https://picsum.photos/500/500?24"
+									/>
+								</picture>
+								<figcaption>The Strain</figcaption>
+							</figure>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<figure className={styles.figure}>
+								<picture>
+									<img
+										alt="A placeholder image"
+										loading="lazy"
+										src="https://picsum.photos/500/500?25"
+									/>
+								</picture>
+								<figcaption>The Following</figcaption>
+							</figure>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<figure className={styles.figure}>
+								<picture>
+									<img
+										alt="A placeholder image"
+										loading="lazy"
+										src="https://picsum.photos/500/500?26"
+									/>
+								</picture>
+								<figcaption>BERLIN STATION</figcaption>
+							</figure>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<figure className={styles.figure}>
+								<picture>
+									<img
+										alt="A placeholder image"
+										loading="lazy"
+										src="https://picsum.photos/500/500?27"
+									/>
+								</picture>
+								<figcaption>Penny Dreadful</figcaption>
+							</figure>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<figure className={styles.figure}>
+								<picture>
+									<img
+										alt="A placeholder image"
+										loading="lazy"
+										src="https://picsum.photos/500/500?28"
+									/>
+								</picture>
+								<figcaption>Castle Rock</figcaption>
+							</figure>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<figure className={styles.figure}>
+								<picture>
+									<img
+										alt="A placeholder image"
+										loading="lazy"
+										src="https://picsum.photos/500/500?29"
+									/>
+								</picture>
+								<figcaption>The Walking Dead</figcaption>
+							</figure>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<figure className={styles.figure}>
+								<picture>
+									<img
+										alt="A placeholder image"
+										loading="lazy"
+										src="https://picsum.photos/500/500?210"
+									/>
+								</picture>
+								<figcaption>Fear The Walking Dead</figcaption>
+							</figure>
+						</a>
+					</li>
+				</ul>
+			</div>
 
-      <div className={styles.gallerySection}>
-        <header>
-          <h2>Basic Form</h2>
-        </header>
+			<div className={styles.gallerySection}>
+				<header>
+					<h2>Basic Form</h2>
+				</header>
 
-        <ul className={styles.horizontalMediaScroller}>
-          <li>
-            <VideoCard />
-          </li>
-          <li>
-            <VideoCard />
-          </li>
-          <li>
-            <VideoCard />
-          </li>
-          <li>
-            <VideoCard />
-          </li>
-          <li>
-            <VideoCard />
-          </li>
-          <li>
-            <VideoCard />
-          </li>
-          <li>
-            <VideoCard />
-          </li>
-          <li>
-            <VideoCard />
-          </li>
-          <li>
-            <VideoCard />
-          </li>
-          <li>
-            <VideoCard />
-          </li>
-          <li>
-            <VideoCard />
-          </li>
-        </ul>
-      </div>
-    </div>
-  );
+				<ul className={styles.horizontalMediaScroller}>
+					<li>
+						<VideoCard />
+					</li>
+					<li>
+						<VideoCard />
+					</li>
+					<li>
+						<VideoCard />
+					</li>
+					<li>
+						<VideoCard />
+					</li>
+					<li>
+						<VideoCard />
+					</li>
+					<li>
+						<VideoCard />
+					</li>
+					<li>
+						<VideoCard />
+					</li>
+					<li>
+						<VideoCard />
+					</li>
+					<li>
+						<VideoCard />
+					</li>
+					<li>
+						<VideoCard />
+					</li>
+					<li>
+						<VideoCard />
+					</li>
+				</ul>
+			</div>
+		</div>
+	);
 };
 
 export default Gallery;
+
+function GalleryItem({ imgsrc, caption }: {imgsrc: string, caption: string}): JSX.Element {
+	return (
+		<a href="#">
+			<figure className={styles.figure}>
+				<picture>
+					<img
+						alt="A placeholder image"
+						loading="lazy"
+						src={imgsrc}
+					/>
+				</picture>
+				<figcaption>{caption}</figcaption>
+			</figure>
+		</a>
+	);
+}

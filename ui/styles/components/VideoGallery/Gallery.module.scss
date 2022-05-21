@@ -4,35 +4,35 @@
 .container{
     --md-space: 2rem;
 
-    min-height : 100vh;
-    width  : 100%;
-    min-block-size: 100%;
-    box-sizing: border-box;
-    max-width: 2200px;
-    margin: 0 auto;  
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: var(--md-space);
+    min-height         : 100vh;
+    width              : 100%;
+    min-block-size     : 100%;
+    box-sizing         : border-box;
+    max-width          : 2200px;
+    margin             : 0 auto;
+    display            : flex;
+    flex-direction     : column;
+    align-items        : flex-start;
+    gap                : var(--md-space);
     padding-block-start: calc(var(--md-space) * 2);
-    padding-block-end: var(--md-space);
-    padding-bottom: 7rem;
+    padding-block-end  : var(--md-space);
+    padding-bottom     : 7rem;
 }
 
 .gallerySection{
-    --gap: var(--md-space);
+    --gap     : var(--md-space);
     --sm-space: 1rem;
     --md-space: 2rem;
 
     display: grid;
-    gap: var(--gap);
+    gap    : var(--gap);
   
     & > header {
       padding-inline-start: var(--gap);
-      padding-inline-end: var(--gap);
+      padding-inline-end  : var(--gap);
   
       display: grid;
-      gap: calc(var(--sm-space) / 2);
+      gap    : calc(var(--sm-space) / 2);
   
       & > :is(h2,h3) {
         margin: 0;
@@ -46,22 +46,22 @@
     --size: 150px;
     @include scrollbar();
 
-    display: grid;
+    display       : grid;
     grid-auto-flow: column;
-    gap: calc(var(--gap) / 2);
-    margin: 0;
+    gap           : calc(var(--gap) / 2);
+    margin        : 0;
   
     padding-inline-start: var(--gap);
-    padding-inline-end: var(--gap);
-    padding-block-start: calc(var(--gap) / 2);
-    padding-block-end: calc(var(--gap) / 2);
+    padding-inline-end  : var(--gap);
+    padding-block-start : calc(var(--gap) / 2);
+    padding-block-end   : calc(var(--gap) / 2);
   
-    overflow-x: auto;
+    overflow-x                : auto;
     overscroll-behavior-inline: contain;
-    scroll-snap-type: inline mandatory;
-    scroll-padding-left: var(--gap);
-    scroll-padding-right: var(--gap);
-    scroll-padding-inline: var(--gap);
+    scroll-snap-type          : inline mandatory;
+    scroll-padding-left       : var(--gap);
+    scroll-padding-right      : var(--gap);
+    scroll-padding-inline     : var(--gap);
   
     @media (prefers-reduced-motion: no-preference) {
       & {
@@ -77,24 +77,24 @@
         position: relative;
   
         &::after {
-          content: "";
+          content : "";
           position: absolute;
   
           inline-size: var(--gap);
-          block-size: 100%;
+          block-size : 100%;
   
           inset-block-start: 0;
-          inset-inline-end: calc(var(--gap) * -1);
+          inset-inline-end : calc(var(--gap) * -1);
         }
       }
     }
   
   
     & a {
-      display: inline-block;
+      display        : inline-block;
       text-decoration: none;
-      color: inherit;
-      outline-offset: 12px;
+      color          : inherit;
+      outline-offset : 12px;
   
       &:focus {
         outline-offset: 7px;
@@ -109,13 +109,13 @@
   }
   
   .figure {
-    display: grid;
-    gap: calc(var(--gap) / 2);
-    margin: 0;
-    width: 15rem;
+    display          : grid;
+    gap              : calc(var(--gap) / 2);
+    margin           : 0;
+    width            : 15rem;
     scroll-snap-align: start;
-    cursor: pointer;
-    user-select: none;
+    cursor           : pointer;
+    user-select      : none;
   
     @media (prefers-reduced-data: reduce) {
       & {
@@ -130,15 +130,17 @@
     & > picture {
       // inline-size: var(--size);
       // block-size: var(--size);
+      width : 250px;
+      height: 250px;
     }
   
     & img {
       inline-size: 100%;
-      block-size: 100%;
-      object-fit: cover;
+      block-size : 100%;
+      object-fit : cover;
   
       border-radius: 1ex;
-      overflow: hidden;
+      overflow     : hidden;
   
       background-image: 
         linear-gradient(
@@ -149,24 +151,24 @@
     }
   
     & > figcaption {
-      font-size: 1.75rem;
+      font-size  : 1.75rem;
       font-weight: 300;
-      word-break: break-word;
+      word-break : break-word;
       font-family: "blokk";
     }
   }
   
   @supports (aspect-ratio: 1) {
     .horizontal-media-scroller figure > picture {
-      inline-size: auto;
+      inline-size : auto;
       aspect-ratio: 1;
   
       @nest section:nth-child(2) & {
-        aspect-ratio: 16/9;  
+        aspect-ratio: 16/9;
       }
   
       @nest section:nth-child(3) & {
-        block-size: calc(var(--size) * 2);
+        block-size  : calc(var(--size) * 2);
         aspect-ratio: 4/3;
   
         @media (width <= 480px) {

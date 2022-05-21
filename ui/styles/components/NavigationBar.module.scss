@@ -25,18 +25,18 @@
             button{
                 font-weight   : initial;
                 letter-spacing: initial;
-                @include button();
+                @include button;
             }
         }
     }
 }
 
 .container {
- @include containerBase();
+ @include containerBase;
 }
 
 .galleryContainer{
-    @include containerBase();
+    @include containerBase;
     position: absolute;
     left    : 0;
     right   : 0;

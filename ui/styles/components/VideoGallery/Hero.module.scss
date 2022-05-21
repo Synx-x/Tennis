@@ -6,10 +6,10 @@
     width  : 100%;
 
     video{
-        width          : 100%;
-        object-fit     : cover;
-        filter         : brightness(0.8);
-        position       : relative;
+        width     : 100%;
+        object-fit: cover;
+        filter    : brightness(0.8);
+        position  : relative;
     }
 
     h1{
@@ -18,7 +18,7 @@
         left     : 50%;
         transform: translate(-50%, -50%);
         font-size: var(--font-size-6);
+        color    : white;
         @include heading(h2);
-        color: white;
     }
 }
