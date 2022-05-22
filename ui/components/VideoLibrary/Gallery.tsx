@@ -24,37 +24,37 @@ const Gallery = () => {
 
 				<ul className={styles.horizontalMediaScroller}>
 					<li>
-						<VideoCard />
+						<VideoCard buttonVisible={true} />
 					</li>
 					<li>
-						<VideoCard />
+						<VideoCard buttonVisible={true} />
 					</li>
 					<li>
-						<VideoCard />
+						<VideoCard buttonVisible={true} />
 					</li>
 					<li>
-						<VideoCard />
+						<VideoCard buttonVisible={true} />
 					</li>
 					<li>
-						<VideoCard />
+						<VideoCard buttonVisible={true} />
 					</li>
 					<li>
-						<VideoCard />
+						<VideoCard buttonVisible={true} />
 					</li>
 					<li>
-						<VideoCard />
+						<VideoCard buttonVisible={true} />
 					</li>
 					<li>
-						<VideoCard />
+						<VideoCard buttonVisible={true} />
 					</li>
 					<li>
-						<VideoCard />
+						<VideoCard buttonVisible={true} />
 					</li>
 					<li>
-						<VideoCard />
+						<VideoCard buttonVisible={true} />
 					</li>
 					<li>
-						<VideoCard />
+						<VideoCard buttonVisible={true} />
 					</li>
 				</ul>
 				{/* <ul className={styles.horizontalMediaScroller}>
@@ -481,7 +481,7 @@ const Gallery = () => {
         </ul> */}
 			</div>
 
-			<div className={styles.gallerySection}>
+			{/* <div className={styles.gallerySection}>
 				<header>
 					<h2>Preparing the Court</h2>
 				</header>
@@ -892,7 +892,7 @@ const Gallery = () => {
 						</a>
 					</li>
 				</ul>
-			</div>
+			</div> */}
 
 			<div className={styles.gallerySection}>
 				<header>
@@ -901,37 +901,79 @@ const Gallery = () => {
 
 				<ul className={styles.horizontalMediaScroller}>
 					<li>
-						<VideoCard />
+						<VideoCard buttonVisible={false} />
 					</li>
 					<li>
-						<VideoCard />
+						<VideoCard buttonVisible={false} />
 					</li>
 					<li>
-						<VideoCard />
+						<VideoCard buttonVisible={false} />
 					</li>
 					<li>
-						<VideoCard />
+						<VideoCard buttonVisible={false} />
 					</li>
 					<li>
-						<VideoCard />
+						<VideoCard buttonVisible={false} />
 					</li>
 					<li>
-						<VideoCard />
+						<VideoCard buttonVisible={false} />
 					</li>
 					<li>
-						<VideoCard />
+						<VideoCard buttonVisible={false} />
 					</li>
 					<li>
-						<VideoCard />
+						<VideoCard buttonVisible={false} />
 					</li>
 					<li>
-						<VideoCard />
+						<VideoCard buttonVisible={false} />
 					</li>
 					<li>
-						<VideoCard />
+						<VideoCard buttonVisible={false} />
 					</li>
 					<li>
-						<VideoCard />
+						<VideoCard buttonVisible={false} />
+					</li>
+				</ul>
+			</div>
+
+			<div className={styles.gallerySection}>
+				<header>
+					<h2>Equipment</h2>
+				</header>
+
+				<ul className={styles.horizontalMediaScroller}>
+					<li>
+						<VideoCard buttonVisible={false} />
+					</li>
+					<li>
+						<VideoCard buttonVisible={false} />
+					</li>
+					<li>
+						<VideoCard buttonVisible={false} />
+					</li>
+					<li>
+						<VideoCard buttonVisible={false} />
+					</li>
+					<li>
+						<VideoCard buttonVisible={false} />
+					</li>
+					<li>
+						<VideoCard buttonVisible={false} />
+					</li>
+					<li>
+						<VideoCard buttonVisible={false} />
+					</li>
+					<li>
+						<VideoCard buttonVisible={false} />
+					</li>
+					<li>
+						<VideoCard buttonVisible={false} />
+					</li>
+					<li>
+						<VideoCard buttonVisible={false} />
+					</li>
+					<li>
+						<VideoCard buttonVisible={false} />
 					</li>
 				</ul>
 			</div>

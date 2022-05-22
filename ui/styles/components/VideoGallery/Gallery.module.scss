@@ -37,6 +37,7 @@
       & > :is(h2,h3) {
         margin: 0;
         @include heading(h2);
+        font-size: var(--font-size-fluid-2);
       }
     }
 
@@ -176,4 +177,16 @@
         }
       }
     }
+  }
+
+  @media(max-width: 850px){
+    .gallerySection{
+    & > header {
+      place-content: center;
+      
+      & > :is(h2,h3) {
+      }
+    }
+
+}
   }

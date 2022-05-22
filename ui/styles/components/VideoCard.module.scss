@@ -4,7 +4,7 @@
 .cardContainer {
   display         : flex;
   flex-direction  : column;
-  min-height      : 250px;
+  min-height      : 300px;
   aspect-ratio    : 16 / 9;
   width           : 100%;
   border-radius   : var(--radius-3);
@@ -27,7 +27,7 @@
   display                : flex;
   height                 : 70%;
   width                  : 100%;
-  background-color       : var(--gray-6);
+  background-image       : linear-gradient(to bottom, hsl(0deg, 0%, 40%), hsl(0deg, 0%, 20%));
   border-top-left-radius : var(--radius-3);
   border-top-right-radius: var(--radius-3);
   position               : relative;
@@ -48,14 +48,14 @@
   height                    : 30%;
   width                     : 100%;
   align-items               : center;
-  padding                   : var(--size-fluid-3);
+  padding                   : var(--size-fluid-1);
   border-bottom-left-radius : var(--radius-3);
   border-bottom-right-radius: var(--radius-3);
   background-color          : var(--surface-1);
 
   div:nth-child(1) {
     display       : flex;
-    width         : 80%;
+    width         : 100%;
     overflow      : auto;
     flex-direction: column;
     height        : 60px;
@@ -63,7 +63,7 @@
 
     h3 {
       font-size     : var(--font-size-4);
-      font-weight   : 600;
+      font-weight   : 400;
       letter-spacing: 2px;
       margin-bottom : 0.5rem;
     }
@@ -85,32 +85,32 @@
 
 @media (max-width: 850px) {
 
-  .cardContainer{
-    min-height: unset;
-  }
+  // .cardContainer{
+  //   min-height: unset;
+  // }
 
-  .cardInfo {
-    flex-direction : column;
-    padding        : 1rem;
-    justify-content: center;
+  // .cardInfo {
+  //   flex-direction : column;
+  //   padding        : 1rem;
+  //   justify-content: center;
 
-    div:nth-child(1) {
-      overflow   : unset;
-      height     : unset;
-      align-items: center;
+  //   div:nth-child(1) {
+  //     overflow   : unset;
+  //     height     : unset;
+  //     align-items: center;
 
-      h3 {
-        font-size: var(--font-size-fluid-1);
-      }
-      p {
-        font-size: var(--font-size-fluid-0);
-      }
-    }
+  //     h3 {
+  //       font-size: var(--font-size-fluid-1);
+  //     }
+  //     p {
+  //       font-size: var(--font-size-fluid-0);
+  //     }
+  //   }
 
-    div:nth-child(2) {
-      display: none;
-    }
-  }
+  //   div:nth-child(2) {
+  //     display: none;
+  //   }
+  // }
 }
 
 @media (min-width: 850px) {
