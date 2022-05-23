@@ -1,9 +1,20 @@
 import React from "react";
 import styles from "../styles/components/VideoCard.module.scss";
+import { locationContext } from "../types/types";
 
-const VideoCard = (buttonVisible: { buttonVisible: boolean }) => {
-	return (
-		<div className={styles.cardContainer}>
+const VideoCard = (videoCard: { buttonVisible: boolean, onClick: ()=> void, context?:locationContext }) => {
+	
+  const { context, buttonVisible, onClick } = videoCard;
+
+  return (
+		<div
+			onClick={onClick}
+			className={
+				context === "Home"
+					? styles.homeCardContainer
+					: styles.cardContainer
+			}
+		>
 			<div className={styles.cardSnippet}>
 				<video autoPlay muted loop>
 					<source
@@ -12,21 +23,25 @@ const VideoCard = (buttonVisible: { buttonVisible: boolean }) => {
 					/>
 				</video>
 			</div>
-			<div className={styles.cardInfo}>
+			<div
+				className={
+					context === "Home" ? styles.homeCardInfo : styles.cardInfo
+				}
+			>
 				<div>
 					<h3>Intro to Tennis Equipment</h3>
 					<p>
 						Lorem ipsum dolor sit amet consectetur adipisicing elit.
 					</p>
 				</div>
-				{buttonVisible ? (
+				{buttonVisible && (
 					<div>
 						<button>Visit</button>
 					</div>
-				) : null}
+				)}
 			</div>
 		</div>
-	);
+  );
 };
 
 export default VideoCard;

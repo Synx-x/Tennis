@@ -2,16 +2,16 @@
 @import '../componentPartials/systemComponents/button';
 
 .actionContainer{
-    display: flex;
-    height: 48rem;
-    flex-direction: column;
+    display        : flex;
+    height         : 48rem;
+    flex-direction : column;
     justify-content: space-evenly;
 }
 
 .actionHeader{
-    display: flex;
-    align-items: center;
-    width: 100%;
+    display        : flex;
+    align-items    : center;
+    width          : 100%;
     justify-content: center;
 
     h2{
@@ -20,9 +20,9 @@
 }
 
 .actionActions{
-    display: flex;
+    display        : flex;
     justify-content: center;
-    gap: 1rem;
+    gap            : 1rem;
 
     button{
         @include button();
@@ -31,7 +31,14 @@
 }
 
 .actionContent{
-    display: flex;
-    width: 100%;
+    display        : flex;
+    width          : 100%;
     justify-content: center;
+}
+
+@media(max-width: 330px){
+    .actionActions{
+        flex-direction: column;
+        padding       : 0 3rem;
+    }
 }

@@ -24,48 +24,81 @@ const Gallery = () => {
 
 				<ul className={styles.horizontalMediaScroller}>
 					<li>
-						<VideoCard buttonVisible={true} />
+						<VideoCard
+							buttonVisible={false}
+							onClick={() => window.scrollTo(0, 0)}
+						/>
 					</li>
 					<li>
-						<VideoCard buttonVisible={true} />
+						<VideoCard
+							buttonVisible={false}
+							onClick={() => window.scrollTo(0, 0)}
+						/>
 					</li>
 					<li>
-						<VideoCard buttonVisible={true} />
+						<VideoCard
+							buttonVisible={false}
+							onClick={() => window.scrollTo(0, 0)}
+						/>
 					</li>
 					<li>
-						<VideoCard buttonVisible={true} />
+						<VideoCard
+							buttonVisible={false}
+							onClick={() => window.scrollTo(0, 0)}
+						/>
 					</li>
 					<li>
-						<VideoCard buttonVisible={true} />
+						<VideoCard
+							buttonVisible={false}
+							onClick={() => window.scrollTo(0, 0)}
+						/>
 					</li>
 					<li>
-						<VideoCard buttonVisible={true} />
+						<VideoCard
+							buttonVisible={false}
+							onClick={() => window.scrollTo(0, 0)}
+						/>
 					</li>
 					<li>
-						<VideoCard buttonVisible={true} />
+						<VideoCard
+							buttonVisible={false}
+							onClick={() => window.scrollTo(0, 0)}
+						/>
 					</li>
 					<li>
-						<VideoCard buttonVisible={true} />
+						<VideoCard
+							buttonVisible={false}
+							onClick={() => window.scrollTo(0, 0)}
+						/>
 					</li>
 					<li>
-						<VideoCard buttonVisible={true} />
+						<VideoCard
+							buttonVisible={false}
+							onClick={() => window.scrollTo(0, 0)}
+						/>
 					</li>
 					<li>
-						<VideoCard buttonVisible={true} />
+						<VideoCard
+							buttonVisible={false}
+							onClick={() => window.scrollTo(0, 0)}
+						/>
 					</li>
 					<li>
-						<VideoCard buttonVisible={true} />
+						<VideoCard
+							buttonVisible={false}
+							onClick={() => window.scrollTo(0, 0)}
+						/>
 					</li>
 				</ul>
 				{/* <ul className={styles.horizontalMediaScroller}>
           <li>
-            <a href="#">
-              <figure className={styles.figure}>
+            <a      href      = "#">
+            <figure className = {styles.figure}>
                 <picture>
                   <img
-                    alt="A placeholder image"
-                    loading="lazy"
-                    src="https://picsum.photos/500/500?14"
+                    alt     = "A placeholder image"
+                    loading = "lazy"
+                    src     = "https://picsum.photos/500/500?14"
                   />
                 </picture>
                 <figcaption>The Strain (limited)</figcaption>
@@ -73,13 +106,13 @@ const Gallery = () => {
             </a>
           </li>
           <li>
-            <a href="#">
-              <figure className={styles.figure}>
+            <a      href      = "#">
+            <figure className = {styles.figure}>
                 <picture>
                   <img
-                    alt="A placeholder image"
-                    loading="lazy"
-                    src="https://picsum.photos/500/500?15"
+                    alt     = "A placeholder image"
+                    loading = "lazy"
+                    src     = "https://picsum.photos/500/500?15"
                   />
                 </picture>
                 <figcaption>The Following</figcaption>
@@ -87,13 +120,13 @@ const Gallery = () => {
             </a>
           </li>
           <li>
-            <a href="#">
-              <figure className={styles.figure}>
+            <a      href      = "#">
+            <figure className = {styles.figure}>
                 <picture>
                   <img
-                    alt="A placeholder image"
-                    loading="lazy"
-                    src="https://picsum.photos/500/500?16"
+                    alt     = "A placeholder image"
+                    loading = "lazy"
+                    src     = "https://picsum.photos/500/500?16"
                   />
                 </picture>
                 <figcaption>BERLIN STATION</figcaption>
@@ -101,13 +134,13 @@ const Gallery = () => {
             </a>
           </li>
           <li>
-            <a href="#">
-              <figure className={styles.figure}>
+            <a      href      = "#">
+            <figure className = {styles.figure}>
                 <picture>
                   <img
-                    alt="A placeholder image"
-                    loading="lazy"
-                    src="https://picsum.photos/500/500?17"
+                    alt     = "A placeholder image"
+                    loading = "lazy"
+                    src     = "https://picsum.photos/500/500?17"
                   />
                 </picture>
                 <figcaption>Penny Dreadful</figcaption>
@@ -115,13 +148,13 @@ const Gallery = () => {
             </a>
           </li>
           <li>
-            <a href="#">
-              <figure className={styles.figure}>
+            <a      href      = "#">
+            <figure className = {styles.figure}>
                 <picture>
                   <img
-                    alt="A placeholder image"
-                    loading="lazy"
-                    src="https://picsum.photos/500/500?18"
+                    alt     = "A placeholder image"
+                    loading = "lazy"
+                    src     = "https://picsum.photos/500/500?18"
                   />
                 </picture>
                 <figcaption>Castle Rock</figcaption>
@@ -129,13 +162,13 @@ const Gallery = () => {
             </a>
           </li>
           <li>
-            <a href="#">
-              <figure className={styles.figure}>
+            <a      href      = "#">
+            <figure className = {styles.figure}>
                 <picture>
                   <img
-                    alt="A placeholder image"
-                    loading="lazy"
-                    src="https://picsum.photos/500/500?19"
+                    alt     = "A placeholder image"
+                    loading = "lazy"
+                    src     = "https://picsum.photos/500/500?19"
                   />
                 </picture>
                 <figcaption>The Walking Dead</figcaption>
@@ -143,13 +176,13 @@ const Gallery = () => {
             </a>
           </li>
           <li>
-            <a href="#">
-              <figure className={styles.figure}>
+            <a      href      = "#">
+            <figure className = {styles.figure}>
                 <picture>
                   <img
-                    alt="A placeholder image"
-                    loading="lazy"
-                    src="https://picsum.photos/500/500?11"
+                    alt     = "A placeholder image"
+                    loading = "lazy"
+                    src     = "https://picsum.photos/500/500?11"
                   />
                 </picture>
                 <figcaption>Legends</figcaption>
@@ -157,13 +190,13 @@ const Gallery = () => {
             </a>
           </li>
           <li>
-            <a href="#">
-              <figure className={styles.figure}>
+            <a      href      = "#">
+            <figure className = {styles.figure}>
                 <picture>
                   <img
-                    alt="A placeholder image"
-                    loading="lazy"
-                    src="https://picsum.photos/500/500?12"
+                    alt     = "A placeholder image"
+                    loading = "lazy"
+                    src     = "https://picsum.photos/500/500?12"
                   />
                 </picture>
                 <figcaption>The Family</figcaption>
@@ -171,13 +204,13 @@ const Gallery = () => {
             </a>
           </li>
           <li>
-            <a href="#">
-              <figure className={styles.figure}>
+            <a      href      = "#">
+            <figure className = {styles.figure}>
                 <picture>
                   <img
-                    alt="A placeholder image"
-                    loading="lazy"
-                    src="https://picsum.photos/500/500?13"
+                    alt     = "A placeholder image"
+                    loading = "lazy"
+                    src     = "https://picsum.photos/500/500?13"
                   />
                 </picture>
                 <figcaption>Almost Family</figcaption>
@@ -185,13 +218,13 @@ const Gallery = () => {
             </a>
           </li>
           <li>
-            <a href="#">
-              <figure className={styles.figure}>
+            <a      href      = "#">
+            <figure className = {styles.figure}>
                 <picture>
                   <img
-                    alt="A placeholder image"
-                    loading="lazy"
-                    src="https://picsum.photos/500/500?110"
+                    alt     = "A placeholder image"
+                    loading = "lazy"
+                    src     = "https://picsum.photos/500/500?110"
                   />
                 </picture>
                 <figcaption>Fear The Walking Dead</figcaption>
@@ -199,13 +232,13 @@ const Gallery = () => {
             </a>
           </li>
           <li>
-            <a href="#">
-              <figure className={styles.figure}>
+            <a      href      = "#">
+            <figure className = {styles.figure}>
                 <picture>
                   <img
-                    alt="A placeholder image"
-                    loading="lazy"
-                    src="https://picsum.photos/500/500?121"
+                    alt     = "A placeholder image"
+                    loading = "lazy"
+                    src     = "https://picsum.photos/500/500?121"
                   />
                 </picture>
                 <figcaption>Legends</figcaption>
@@ -213,13 +246,13 @@ const Gallery = () => {
             </a>
           </li>
           <li>
-            <a href="#">
-              <figure className={styles.figure}>
+            <a      href      = "#">
+            <figure className = {styles.figure}>
                 <picture>
                   <img
-                    alt="A placeholder image"
-                    loading="lazy"
-                    src="https://picsum.photos/500/500?132"
+                    alt     = "A placeholder image"
+                    loading = "lazy"
+                    src     = "https://picsum.photos/500/500?132"
                   />
                 </picture>
                 <figcaption>The Family</figcaption>
@@ -227,13 +260,13 @@ const Gallery = () => {
             </a>
           </li>
           <li>
-            <a href="#">
-              <figure className={styles.figure}>
+            <a      href      = "#">
+            <figure className = {styles.figure}>
                 <picture>
                   <img
-                    alt="A placeholder image"
-                    loading="lazy"
-                    src="https://picsum.photos/500/500?123"
+                    alt     = "A placeholder image"
+                    loading = "lazy"
+                    src     = "https://picsum.photos/500/500?123"
                   />
                 </picture>
                 <figcaption>Almost Family</figcaption>
@@ -241,13 +274,13 @@ const Gallery = () => {
             </a>
           </li>
           <li>
-            <a href="#">
-              <figure className={styles.figure}>
+            <a      href      = "#">
+            <figure className = {styles.figure}>
                 <picture>
                   <img
-                    alt="A placeholder image"
-                    loading="lazy"
-                    src="https://picsum.photos/500/500?144"
+                    alt     = "A placeholder image"
+                    loading = "lazy"
+                    src     = "https://picsum.photos/500/500?144"
                   />
                 </picture>
                 <figcaption>The Strain</figcaption>
@@ -255,13 +288,13 @@ const Gallery = () => {
             </a>
           </li>
           <li>
-            <a href="#">
-              <figure className={styles.figure}>
+            <a      href      = "#">
+            <figure className = {styles.figure}>
                 <picture>
                   <img
-                    alt="A placeholder image"
-                    loading="lazy"
-                    src="https://picsum.photos/500/500?125"
+                    alt     = "A placeholder image"
+                    loading = "lazy"
+                    src     = "https://picsum.photos/500/500?125"
                   />
                 </picture>
                 <figcaption>The Following</figcaption>
@@ -269,13 +302,13 @@ const Gallery = () => {
             </a>
           </li>
           <li>
-            <a href="#">
-              <figure className={styles.figure}>
+            <a      href      = "#">
+            <figure className = {styles.figure}>
                 <picture>
                   <img
-                    alt="A placeholder image"
-                    loading="lazy"
-                    src="https://picsum.photos/500/500?126"
+                    alt     = "A placeholder image"
+                    loading = "lazy"
+                    src     = "https://picsum.photos/500/500?126"
                   />
                 </picture>
                 <figcaption>BERLIN STATION</figcaption>
@@ -283,13 +316,13 @@ const Gallery = () => {
             </a>
           </li>
           <li>
-            <a href="#">
-              <figure className={styles.figure}>
+            <a      href      = "#">
+            <figure className = {styles.figure}>
                 <picture>
                   <img
-                    alt="A placeholder image"
-                    loading="lazy"
-                    src="https://picsum.photos/500/500?137"
+                    alt     = "A placeholder image"
+                    loading = "lazy"
+                    src     = "https://picsum.photos/500/500?137"
                   />
                 </picture>
                 <figcaption>Penny Dreadful</figcaption>
@@ -297,13 +330,13 @@ const Gallery = () => {
             </a>
           </li>
           <li>
-            <a href="#">
-              <figure className={styles.figure}>
+            <a      href      = "#">
+            <figure className = {styles.figure}>
                 <picture>
                   <img
-                    alt="A placeholder image"
-                    loading="lazy"
-                    src="https://picsum.photos/500/500?118"
+                    alt     = "A placeholder image"
+                    loading = "lazy"
+                    src     = "https://picsum.photos/500/500?118"
                   />
                 </picture>
                 <figcaption>Castle Rock</figcaption>
@@ -311,13 +344,13 @@ const Gallery = () => {
             </a>
           </li>
           <li>
-            <a href="#">
-              <figure className={styles.figure}>
+            <a      href      = "#">
+            <figure className = {styles.figure}>
                 <picture>
                   <img
-                    alt="A placeholder image"
-                    loading="lazy"
-                    src="https://picsum.photos/500/500?419"
+                    alt     = "A placeholder image"
+                    loading = "lazy"
+                    src     = "https://picsum.photos/500/500?419"
                   />
                 </picture>
                 <figcaption>The Walking Dead</figcaption>
@@ -325,13 +358,13 @@ const Gallery = () => {
             </a>
           </li>
           <li>
-            <a href="#">
-              <figure className={styles.figure}>
+            <a      href      = "#">
+            <figure className = {styles.figure}>
                 <picture>
                   <img
-                    alt="A placeholder image"
-                    loading="lazy"
-                    src="https://picsum.photos/500/500?110"
+                    alt     = "A placeholder image"
+                    loading = "lazy"
+                    src     = "https://picsum.photos/500/500?110"
                   />
                 </picture>
                 <figcaption>Fear The Walking Dead</figcaption>
@@ -339,13 +372,13 @@ const Gallery = () => {
             </a>
           </li>
           <li>
-            <a href="#">
-              <figure className={styles.figure}>
+            <a      href      = "#">
+            <figure className = {styles.figure}>
                 <picture>
                   <img
-                    alt="A placeholder image"
-                    loading="lazy"
-                    src="https://picsum.photos/500/500?112"
+                    alt     = "A placeholder image"
+                    loading = "lazy"
+                    src     = "https://picsum.photos/500/500?112"
                   />
                 </picture>
                 <figcaption>Legends</figcaption>
@@ -353,13 +386,13 @@ const Gallery = () => {
             </a>
           </li>
           <li>
-            <a href="#">
-              <figure className={styles.figure}>
+            <a      href      = "#">
+            <figure className = {styles.figure}>
                 <picture>
                   <img
-                    alt="A placeholder image"
-                    loading="lazy"
-                    src="https://picsum.photos/500/500?122"
+                    alt     = "A placeholder image"
+                    loading = "lazy"
+                    src     = "https://picsum.photos/500/500?122"
                   />
                 </picture>
                 <figcaption>The Family</figcaption>
@@ -367,13 +400,13 @@ const Gallery = () => {
             </a>
           </li>
           <li>
-            <a href="#">
-              <figure className={styles.figure}>
+            <a      href      = "#">
+            <figure className = {styles.figure}>
                 <picture>
                   <img
-                    alt="A placeholder image"
-                    loading="lazy"
-                    src="https://picsum.photos/500/500?313"
+                    alt     = "A placeholder image"
+                    loading = "lazy"
+                    src     = "https://picsum.photos/500/500?313"
                   />
                 </picture>
                 <figcaption>Almost Family</figcaption>
@@ -381,13 +414,13 @@ const Gallery = () => {
             </a>
           </li>
           <li>
-            <a href="#">
-              <figure className={styles.figure}>
+            <a      href      = "#">
+            <figure className = {styles.figure}>
                 <picture>
                   <img
-                    alt="A placeholder image"
-                    loading="lazy"
-                    src="https://picsum.photos/500/500?194"
+                    alt     = "A placeholder image"
+                    loading = "lazy"
+                    src     = "https://picsum.photos/500/500?194"
                   />
                 </picture>
                 <figcaption>The Strain</figcaption>
@@ -395,13 +428,13 @@ const Gallery = () => {
             </a>
           </li>
           <li>
-            <a href="#">
-              <figure className={styles.figure}>
+            <a      href      = "#">
+            <figure className = {styles.figure}>
                 <picture>
                   <img
-                    alt="A placeholder image"
-                    loading="lazy"
-                    src="https://picsum.photos/500/500?915"
+                    alt     = "A placeholder image"
+                    loading = "lazy"
+                    src     = "https://picsum.photos/500/500?915"
                   />
                 </picture>
                 <figcaption>The Following</figcaption>
@@ -409,13 +442,13 @@ const Gallery = () => {
             </a>
           </li>
           <li>
-            <a href="#">
-              <figure className={styles.figure}>
+            <a      href      = "#">
+            <figure className = {styles.figure}>
                 <picture>
                   <img
-                    alt="A placeholder image"
-                    loading="lazy"
-                    src="https://picsum.photos/500/500?176"
+                    alt     = "A placeholder image"
+                    loading = "lazy"
+                    src     = "https://picsum.photos/500/500?176"
                   />
                 </picture>
                 <figcaption>BERLIN STATION</figcaption>
@@ -423,13 +456,13 @@ const Gallery = () => {
             </a>
           </li>
           <li>
-            <a href="#">
-              <figure className={styles.figure}>
+            <a      href      = "#">
+            <figure className = {styles.figure}>
                 <picture>
                   <img
-                    alt="A placeholder image"
-                    loading="lazy"
-                    src="https://picsum.photos/500/500?187"
+                    alt     = "A placeholder image"
+                    loading = "lazy"
+                    src     = "https://picsum.photos/500/500?187"
                   />
                 </picture>
                 <figcaption>Penny Dreadful</figcaption>
@@ -437,13 +470,13 @@ const Gallery = () => {
             </a>
           </li>
           <li>
-            <a href="#">
-              <figure className={styles.figure}>
+            <a      href      = "#">
+            <figure className = {styles.figure}>
                 <picture>
                   <img
-                    alt="A placeholder image"
-                    loading="lazy"
-                    src="https://picsum.photos/500/500?178"
+                    alt     = "A placeholder image"
+                    loading = "lazy"
+                    src     = "https://picsum.photos/500/500?178"
                   />
                 </picture>
                 <figcaption>Castle Rock</figcaption>
@@ -451,13 +484,13 @@ const Gallery = () => {
             </a>
           </li>
           <li>
-            <a href="#">
-              <figure className={styles.figure}>
+            <a      href      = "#">
+            <figure className = {styles.figure}>
                 <picture>
                   <img
-                    alt="A placeholder image"
-                    loading="lazy"
-                    src="https://picsum.photos/500/500?189"
+                    alt     = "A placeholder image"
+                    loading = "lazy"
+                    src     = "https://picsum.photos/500/500?189"
                   />
                 </picture>
                 <figcaption>The Walking Dead</figcaption>
@@ -465,13 +498,13 @@ const Gallery = () => {
             </a>
           </li>
           <li>
-            <a href="#">
-              <figure className={styles.figure}>
+            <a      href      = "#">
+            <figure className = {styles.figure}>
                 <picture>
                   <img
-                    alt="A placeholder image"
-                    loading="lazy"
-                    src="https://picsum.photos/500/500?117"
+                    alt     = "A placeholder image"
+                    loading = "lazy"
+                    src     = "https://picsum.photos/500/500?117"
                   />
                 </picture>
                 <figcaption>Fear The Walking Dead</figcaption>
@@ -486,27 +519,27 @@ const Gallery = () => {
 					<h2>Preparing the Court</h2>
 				</header>
 
-				<ul className={styles.horizontalMediaScroller}>
+				<ul className = {styles.horizontalMediaScroller}>
 					<li>
 						<GalleryItem
-							imgsrc="https://picsum.photos/500/500?26"
-							caption="BERLIN STATION"
+							imgsrc  = "https://picsum.photos/500/500?26"
+							caption = "BERLIN STATION"
 						/>
 					</li>
 					<li>
 						<GalleryItem
-							imgsrc="https://picsum.photos/500/500?27"
-							caption="Penny Awful: An original series"
+							imgsrc  = "https://picsum.photos/500/500?27"
+							caption = "Penny Awful: An original series"
 						/>
 					</li>
 					<li>
-						<a href="#">
-							<figure className={styles.figure}>
+						<a      href      = "#">
+						<figure className = {styles.figure}>
 								<picture>
 									<img
-										alt="A placeholder image"
-										loading="lazy"
-										src="https://picsum.photos/500/500?28"
+										alt     = "A placeholder image"
+										loading = "lazy"
+										src     = "https://picsum.photos/500/500?28"
 									/>
 								</picture>
 								<figcaption>Castle Rock</figcaption>
@@ -514,13 +547,13 @@ const Gallery = () => {
 						</a>
 					</li>
 					<li>
-						<a href="#">
-							<figure className={styles.figure}>
+						<a      href      = "#">
+						<figure className = {styles.figure}>
 								<picture>
 									<img
-										alt="A placeholder image"
-										loading="lazy"
-										src="https://picsum.photos/500/500?29"
+										alt     = "A placeholder image"
+										loading = "lazy"
+										src     = "https://picsum.photos/500/500?29"
 									/>
 								</picture>
 								<figcaption>The Walking Dead</figcaption>
@@ -528,13 +561,13 @@ const Gallery = () => {
 						</a>
 					</li>
 					<li>
-						<a href="#">
-							<figure className={styles.figure}>
+						<a      href      = "#">
+						<figure className = {styles.figure}>
 								<picture>
 									<img
-										alt="A placeholder image"
-										loading="lazy"
-										src="https://picsum.photos/500/500?210"
+										alt     = "A placeholder image"
+										loading = "lazy"
+										src     = "https://picsum.photos/500/500?210"
 									/>
 								</picture>
 								<figcaption>Fear The Walking Dead</figcaption>
@@ -542,13 +575,13 @@ const Gallery = () => {
 						</a>
 					</li>
 					<li>
-						<a href="#">
-							<figure className={styles.figure}>
+						<a      href      = "#">
+						<figure className = {styles.figure}>
 								<picture>
 									<img
-										alt="A placeholder image"
-										loading="lazy"
-										src="https://picsum.photos/500/500?21"
+										alt     = "A placeholder image"
+										loading = "lazy"
+										src     = "https://picsum.photos/500/500?21"
 									/>
 								</picture>
 								<figcaption>Legends</figcaption>
@@ -556,13 +589,13 @@ const Gallery = () => {
 						</a>
 					</li>
 					<li>
-						<a href="#">
-							<figure className={styles.figure}>
+						<a      href      = "#">
+						<figure className = {styles.figure}>
 								<picture>
 									<img
-										alt="A placeholder image"
-										loading="lazy"
-										src="https://picsum.photos/500/500?22"
+										alt     = "A placeholder image"
+										loading = "lazy"
+										src     = "https://picsum.photos/500/500?22"
 									/>
 								</picture>
 								<figcaption>The Family</figcaption>
@@ -570,13 +603,13 @@ const Gallery = () => {
 						</a>
 					</li>
 					<li>
-						<a href="#">
-							<figure className={styles.figure}>
+						<a      href      = "#">
+						<figure className = {styles.figure}>
 								<picture>
 									<img
-										alt="A placeholder image"
-										loading="lazy"
-										src="https://picsum.photos/500/500?23"
+										alt     = "A placeholder image"
+										loading = "lazy"
+										src     = "https://picsum.photos/500/500?23"
 									/>
 								</picture>
 								<figcaption>Almost Family</figcaption>
@@ -584,13 +617,13 @@ const Gallery = () => {
 						</a>
 					</li>
 					<li>
-						<a href="#">
-							<figure className={styles.figure}>
+						<a      href      = "#">
+						<figure className = {styles.figure}>
 								<picture>
 									<img
-										alt="A placeholder image"
-										loading="lazy"
-										src="https://picsum.photos/500/500?24"
+										alt     = "A placeholder image"
+										loading = "lazy"
+										src     = "https://picsum.photos/500/500?24"
 									/>
 								</picture>
 								<figcaption>The Strain</figcaption>
@@ -598,13 +631,13 @@ const Gallery = () => {
 						</a>
 					</li>
 					<li>
-						<a href="#">
-							<figure className={styles.figure}>
+						<a      href      = "#">
+						<figure className = {styles.figure}>
 								<picture>
 									<img
-										alt="A placeholder image"
-										loading="lazy"
-										src="https://picsum.photos/500/500?25"
+										alt     = "A placeholder image"
+										loading = "lazy"
+										src     = "https://picsum.photos/500/500?25"
 									/>
 								</picture>
 								<figcaption>The Following</figcaption>
@@ -612,13 +645,13 @@ const Gallery = () => {
 						</a>
 					</li>
 					<li>
-						<a href="#">
-							<figure className={styles.figure}>
+						<a      href      = "#">
+						<figure className = {styles.figure}>
 								<picture>
 									<img
-										alt="A placeholder image"
-										loading="lazy"
-										src="https://picsum.photos/500/500?26"
+										alt     = "A placeholder image"
+										loading = "lazy"
+										src     = "https://picsum.photos/500/500?26"
 									/>
 								</picture>
 								<figcaption>BERLIN STATION</figcaption>
@@ -626,13 +659,13 @@ const Gallery = () => {
 						</a>
 					</li>
 					<li>
-						<a href="#">
-							<figure className={styles.figure}>
+						<a      href      = "#">
+						<figure className = {styles.figure}>
 								<picture>
 									<img
-										alt="A placeholder image"
-										loading="lazy"
-										src="https://picsum.photos/500/500?27"
+										alt     = "A placeholder image"
+										loading = "lazy"
+										src     = "https://picsum.photos/500/500?27"
 									/>
 								</picture>
 								<figcaption>Penny Dreadful</figcaption>
@@ -640,13 +673,13 @@ const Gallery = () => {
 						</a>
 					</li>
 					<li>
-						<a href="#">
-							<figure className={styles.figure}>
+						<a      href      = "#">
+						<figure className = {styles.figure}>
 								<picture>
 									<img
-										alt="A placeholder image"
-										loading="lazy"
-										src="https://picsum.photos/500/500?28"
+										alt     = "A placeholder image"
+										loading = "lazy"
+										src     = "https://picsum.photos/500/500?28"
 									/>
 								</picture>
 								<figcaption>Castle Rock</figcaption>
@@ -654,13 +687,13 @@ const Gallery = () => {
 						</a>
 					</li>
 					<li>
-						<a href="#">
-							<figure className={styles.figure}>
+						<a      href      = "#">
+						<figure className = {styles.figure}>
 								<picture>
 									<img
-										alt="A placeholder image"
-										loading="lazy"
-										src="https://picsum.photos/500/500?29"
+										alt     = "A placeholder image"
+										loading = "lazy"
+										src     = "https://picsum.photos/500/500?29"
 									/>
 								</picture>
 								<figcaption>The Walking Dead</figcaption>
@@ -668,13 +701,13 @@ const Gallery = () => {
 						</a>
 					</li>
 					<li>
-						<a href="#">
-							<figure className={styles.figure}>
+						<a      href      = "#">
+						<figure className = {styles.figure}>
 								<picture>
 									<img
-										alt="A placeholder image"
-										loading="lazy"
-										src="https://picsum.photos/500/500?210"
+										alt     = "A placeholder image"
+										loading = "lazy"
+										src     = "https://picsum.photos/500/500?210"
 									/>
 								</picture>
 								<figcaption>Fear The Walking Dead</figcaption>
@@ -682,13 +715,13 @@ const Gallery = () => {
 						</a>
 					</li>
 					<li>
-						<a href="#">
-							<figure className={styles.figure}>
+						<a      href      = "#">
+						<figure className = {styles.figure}>
 								<picture>
 									<img
-										alt="A placeholder image"
-										loading="lazy"
-										src="https://picsum.photos/500/500?21"
+										alt     = "A placeholder image"
+										loading = "lazy"
+										src     = "https://picsum.photos/500/500?21"
 									/>
 								</picture>
 								<figcaption>Legends</figcaption>
@@ -696,13 +729,13 @@ const Gallery = () => {
 						</a>
 					</li>
 					<li>
-						<a href="#">
-							<figure className={styles.figure}>
+						<a      href      = "#">
+						<figure className = {styles.figure}>
 								<picture>
 									<img
-										alt="A placeholder image"
-										loading="lazy"
-										src="https://picsum.photos/500/500?21"
+										alt     = "A placeholder image"
+										loading = "lazy"
+										src     = "https://picsum.photos/500/500?21"
 									/>
 								</picture>
 								<figcaption>Legends</figcaption>
@@ -710,13 +743,13 @@ const Gallery = () => {
 						</a>
 					</li>
 					<li>
-						<a href="#">
-							<figure className={styles.figure}>
+						<a      href      = "#">
+						<figure className = {styles.figure}>
 								<picture>
 									<img
-										alt="A placeholder image"
-										loading="lazy"
-										src="https://picsum.photos/500/500?22"
+										alt     = "A placeholder image"
+										loading = "lazy"
+										src     = "https://picsum.photos/500/500?22"
 									/>
 								</picture>
 								<figcaption>The Family</figcaption>
@@ -724,13 +757,13 @@ const Gallery = () => {
 						</a>
 					</li>
 					<li>
-						<a href="#">
-							<figure className={styles.figure}>
+						<a      href      = "#">
+						<figure className = {styles.figure}>
 								<picture>
 									<img
-										alt="A placeholder image"
-										loading="lazy"
-										src="https://picsum.photos/500/500?23"
+										alt     = "A placeholder image"
+										loading = "lazy"
+										src     = "https://picsum.photos/500/500?23"
 									/>
 								</picture>
 								<figcaption>Almost Family</figcaption>
@@ -738,13 +771,13 @@ const Gallery = () => {
 						</a>
 					</li>
 					<li>
-						<a href="#">
-							<figure className={styles.figure}>
+						<a      href      = "#">
+						<figure className = {styles.figure}>
 								<picture>
 									<img
-										alt="A placeholder image"
-										loading="lazy"
-										src="https://picsum.photos/500/500?24"
+										alt     = "A placeholder image"
+										loading = "lazy"
+										src     = "https://picsum.photos/500/500?24"
 									/>
 								</picture>
 								<figcaption>The Strain</figcaption>
@@ -752,13 +785,13 @@ const Gallery = () => {
 						</a>
 					</li>
 					<li>
-						<a href="#">
-							<figure className={styles.figure}>
+						<a      href      = "#">
+						<figure className = {styles.figure}>
 								<picture>
 									<img
-										alt="A placeholder image"
-										loading="lazy"
-										src="https://picsum.photos/500/500?25"
+										alt     = "A placeholder image"
+										loading = "lazy"
+										src     = "https://picsum.photos/500/500?25"
 									/>
 								</picture>
 								<figcaption>The Following</figcaption>
@@ -766,13 +799,13 @@ const Gallery = () => {
 						</a>
 					</li>
 					<li>
-						<a href="#">
-							<figure className={styles.figure}>
+						<a      href      = "#">
+						<figure className = {styles.figure}>
 								<picture>
 									<img
-										alt="A placeholder image"
-										loading="lazy"
-										src="https://picsum.photos/500/500?22"
+										alt     = "A placeholder image"
+										loading = "lazy"
+										src     = "https://picsum.photos/500/500?22"
 									/>
 								</picture>
 								<figcaption>The Family</figcaption>
@@ -780,13 +813,13 @@ const Gallery = () => {
 						</a>
 					</li>
 					<li>
-						<a href="#">
-							<figure className={styles.figure}>
+						<a      href      = "#">
+						<figure className = {styles.figure}>
 								<picture>
 									<img
-										alt="A placeholder image"
-										loading="lazy"
-										src="https://picsum.photos/500/500?23"
+										alt     = "A placeholder image"
+										loading = "lazy"
+										src     = "https://picsum.photos/500/500?23"
 									/>
 								</picture>
 								<figcaption>Almost Family</figcaption>
@@ -794,13 +827,13 @@ const Gallery = () => {
 						</a>
 					</li>
 					<li>
-						<a href="#">
-							<figure className={styles.figure}>
+						<a      href      = "#">
+						<figure className = {styles.figure}>
 								<picture>
 									<img
-										alt="A placeholder image"
-										loading="lazy"
-										src="https://picsum.photos/500/500?24"
+										alt     = "A placeholder image"
+										loading = "lazy"
+										src     = "https://picsum.photos/500/500?24"
 									/>
 								</picture>
 								<figcaption>The Strain</figcaption>
@@ -808,13 +841,13 @@ const Gallery = () => {
 						</a>
 					</li>
 					<li>
-						<a href="#">
-							<figure className={styles.figure}>
+						<a      href      = "#">
+						<figure className = {styles.figure}>
 								<picture>
 									<img
-										alt="A placeholder image"
-										loading="lazy"
-										src="https://picsum.photos/500/500?25"
+										alt     = "A placeholder image"
+										loading = "lazy"
+										src     = "https://picsum.photos/500/500?25"
 									/>
 								</picture>
 								<figcaption>The Following</figcaption>
@@ -822,13 +855,13 @@ const Gallery = () => {
 						</a>
 					</li>
 					<li>
-						<a href="#">
-							<figure className={styles.figure}>
+						<a      href      = "#">
+						<figure className = {styles.figure}>
 								<picture>
 									<img
-										alt="A placeholder image"
-										loading="lazy"
-										src="https://picsum.photos/500/500?26"
+										alt     = "A placeholder image"
+										loading = "lazy"
+										src     = "https://picsum.photos/500/500?26"
 									/>
 								</picture>
 								<figcaption>BERLIN STATION</figcaption>
@@ -836,13 +869,13 @@ const Gallery = () => {
 						</a>
 					</li>
 					<li>
-						<a href="#">
-							<figure className={styles.figure}>
+						<a      href      = "#">
+						<figure className = {styles.figure}>
 								<picture>
 									<img
-										alt="A placeholder image"
-										loading="lazy"
-										src="https://picsum.photos/500/500?27"
+										alt     = "A placeholder image"
+										loading = "lazy"
+										src     = "https://picsum.photos/500/500?27"
 									/>
 								</picture>
 								<figcaption>Penny Dreadful</figcaption>
@@ -850,13 +883,13 @@ const Gallery = () => {
 						</a>
 					</li>
 					<li>
-						<a href="#">
-							<figure className={styles.figure}>
+						<a      href      = "#">
+						<figure className = {styles.figure}>
 								<picture>
 									<img
-										alt="A placeholder image"
-										loading="lazy"
-										src="https://picsum.photos/500/500?28"
+										alt     = "A placeholder image"
+										loading = "lazy"
+										src     = "https://picsum.photos/500/500?28"
 									/>
 								</picture>
 								<figcaption>Castle Rock</figcaption>
@@ -864,13 +897,13 @@ const Gallery = () => {
 						</a>
 					</li>
 					<li>
-						<a href="#">
-							<figure className={styles.figure}>
+						<a      href      = "#">
+						<figure className = {styles.figure}>
 								<picture>
 									<img
-										alt="A placeholder image"
-										loading="lazy"
-										src="https://picsum.photos/500/500?29"
+										alt     = "A placeholder image"
+										loading = "lazy"
+										src     = "https://picsum.photos/500/500?29"
 									/>
 								</picture>
 								<figcaption>The Walking Dead</figcaption>
@@ -878,13 +911,13 @@ const Gallery = () => {
 						</a>
 					</li>
 					<li>
-						<a href="#">
-							<figure className={styles.figure}>
+						<a      href      = "#">
+						<figure className = {styles.figure}>
 								<picture>
 									<img
-										alt="A placeholder image"
-										loading="lazy"
-										src="https://picsum.photos/500/500?210"
+										alt     = "A placeholder image"
+										loading = "lazy"
+										src     = "https://picsum.photos/500/500?210"
 									/>
 								</picture>
 								<figcaption>Fear The Walking Dead</figcaption>
@@ -901,37 +934,70 @@ const Gallery = () => {
 
 				<ul className={styles.horizontalMediaScroller}>
 					<li>
-						<VideoCard buttonVisible={false} />
+						<VideoCard
+							buttonVisible={false}
+							onClick={() => window.scrollTo(0, 0)}
+						/>
 					</li>
 					<li>
-						<VideoCard buttonVisible={false} />
+						<VideoCard
+							buttonVisible={false}
+							onClick={() => window.scrollTo(0, 0)}
+						/>
 					</li>
 					<li>
-						<VideoCard buttonVisible={false} />
+						<VideoCard
+							buttonVisible={false}
+							onClick={() => window.scrollTo(0, 0)}
+						/>
 					</li>
 					<li>
-						<VideoCard buttonVisible={false} />
+						<VideoCard
+							buttonVisible={false}
+							onClick={() => window.scrollTo(0, 0)}
+						/>
 					</li>
 					<li>
-						<VideoCard buttonVisible={false} />
+						<VideoCard
+							buttonVisible={false}
+							onClick={() => window.scrollTo(0, 0)}
+						/>
 					</li>
 					<li>
-						<VideoCard buttonVisible={false} />
+						<VideoCard
+							buttonVisible={false}
+							onClick={() => window.scrollTo(0, 0)}
+						/>
 					</li>
 					<li>
-						<VideoCard buttonVisible={false} />
+						<VideoCard
+							buttonVisible={false}
+							onClick={() => window.scrollTo(0, 0)}
+						/>
 					</li>
 					<li>
-						<VideoCard buttonVisible={false} />
+						<VideoCard
+							buttonVisible={false}
+							onClick={() => window.scrollTo(0, 0)}
+						/>
 					</li>
 					<li>
-						<VideoCard buttonVisible={false} />
+						<VideoCard
+							buttonVisible={false}
+							onClick={() => window.scrollTo(0, 0)}
+						/>
 					</li>
 					<li>
-						<VideoCard buttonVisible={false} />
+						<VideoCard
+							buttonVisible={false}
+							onClick={() => window.scrollTo(0, 0)}
+						/>
 					</li>
 					<li>
-						<VideoCard buttonVisible={false} />
+						<VideoCard
+							buttonVisible={false}
+							onClick={() => window.scrollTo(0, 0)}
+						/>
 					</li>
 				</ul>
 			</div>
@@ -943,37 +1009,70 @@ const Gallery = () => {
 
 				<ul className={styles.horizontalMediaScroller}>
 					<li>
-						<VideoCard buttonVisible={false} />
+						<VideoCard
+							buttonVisible={false}
+							onClick={() => window.scrollTo(0, 0)}
+						/>
 					</li>
 					<li>
-						<VideoCard buttonVisible={false} />
+						<VideoCard
+							buttonVisible={false}
+							onClick={() => window.scrollTo(0, 0)}
+						/>
 					</li>
 					<li>
-						<VideoCard buttonVisible={false} />
+						<VideoCard
+							buttonVisible={false}
+							onClick={() => window.scrollTo(0, 0)}
+						/>
 					</li>
 					<li>
-						<VideoCard buttonVisible={false} />
+						<VideoCard
+							buttonVisible={false}
+							onClick={() => window.scrollTo(0, 0)}
+						/>
 					</li>
 					<li>
-						<VideoCard buttonVisible={false} />
+						<VideoCard
+							buttonVisible={false}
+							onClick={() => window.scrollTo(0, 0)}
+						/>
 					</li>
 					<li>
-						<VideoCard buttonVisible={false} />
+						<VideoCard
+							buttonVisible={false}
+							onClick={() => window.scrollTo(0, 0)}
+						/>
 					</li>
 					<li>
-						<VideoCard buttonVisible={false} />
+						<VideoCard
+							buttonVisible={false}
+							onClick={() => window.scrollTo(0, 0)}
+						/>
 					</li>
 					<li>
-						<VideoCard buttonVisible={false} />
+						<VideoCard
+							buttonVisible={false}
+							onClick={() => window.scrollTo(0, 0)}
+						/>
 					</li>
 					<li>
-						<VideoCard buttonVisible={false} />
+						<VideoCard
+							buttonVisible={false}
+							onClick={() => window.scrollTo(0, 0)}
+						/>
 					</li>
 					<li>
-						<VideoCard buttonVisible={false} />
+						<VideoCard
+							buttonVisible={false}
+							onClick={() => window.scrollTo(0, 0)}
+						/>
 					</li>
 					<li>
-						<VideoCard buttonVisible={false} />
+						<VideoCard
+							buttonVisible={false}
+							onClick={() => window.scrollTo(0, 0)}
+						/>
 					</li>
 				</ul>
 			</div>
@@ -983,7 +1082,13 @@ const Gallery = () => {
 
 export default Gallery;
 
-function GalleryItem({ imgsrc, caption }: {imgsrc: string, caption: string}): JSX.Element {
+function GalleryItem({
+	imgsrc,
+	caption,
+}: {
+	imgsrc: string;
+	caption: string;
+}): JSX.Element {
 	return (
 		<a href="#">
 			<figure className={styles.figure}>

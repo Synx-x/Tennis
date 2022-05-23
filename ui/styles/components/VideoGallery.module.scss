@@ -36,15 +36,16 @@
 @media (max-width: 850px){
 
     .galleryContainer{
-        padding: var(--size-fluid-3);
-        height: unset;
+        //padding: var(--size-fluid-3);
+        height    : unset;
         min-height: unset;
-        gap: 5rem;
+        gap       : 5rem;
     }
 
     .galleryContent{
         flex-direction: column;
-        gap: 5rem;
+        gap           : 5rem;
+        padding       : 0 1rem;
     }
 
     .galleryHeader{

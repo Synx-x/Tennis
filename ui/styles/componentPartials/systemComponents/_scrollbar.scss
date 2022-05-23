@@ -26,10 +26,10 @@
     }
 }
 
-@mixin scrollbar-1() {
+@mixin scrollbar-1($color: var(--green-8)) {
     &::-webkit-scrollbar-thumb {
         all: unset;
-        background-color: var(--green-8);
+        background-color: $color;
         border: 5px solid transparent;
         border-radius: 50px;
         background-clip: content-box;

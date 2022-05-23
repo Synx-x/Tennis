@@ -6,5 +6,5 @@ html{
     --green-8: #0ece35;
     --gray: #b5b5b55c;
 
-    @include scrollbar-1();
+    @include scrollbar-1(#0ece3585);
 }

@@ -2,7 +2,7 @@
   @mixin hamburger-line {
     width: 100%;
     height: 3px;
-    background-color: black;
+    background-color: var(--text-1);
     position: absolute;
     left: 0;
   }
@@ -19,10 +19,10 @@
     background-color: transparent;
     border: 0;
     margin: 0;
-    float: right;
   
     &active {
-      transform: translateX(-250px);
+      transform: translateX(-19rem);
+      z-index:2;
     }
   
     &__box {
@@ -69,13 +69,14 @@
   
   .navigation {
     height: 100vh;
-    width: 250px;
-    background-color: blue;
-    position: absolute;
+    width: 100%;
+    background-color: var(--surface-1);
+    position: fixed;
     top: 0;
     right: 0;
-    transform: translateX(250px);
-  
+    transform: translateX(100%);
+    z-index: 1;
+
     &active {
       transform: translateX(0);
     }
