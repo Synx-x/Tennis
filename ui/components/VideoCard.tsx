@@ -6,8 +6,12 @@ const VideoCard = (videoCard: { buttonVisible: boolean, onClick: ()=> void, cont
 	
   const { context, buttonVisible, onClick } = videoCard;
 
-  return (
-		<div
+	const tagType = context === "Home" ? "div" : "button";
+
+	const Tag = tagType as keyof JSX.IntrinsicElements;
+
+	return (
+		<Tag
 			onClick={onClick}
 			className={
 				context === "Home"
@@ -40,8 +44,8 @@ const VideoCard = (videoCard: { buttonVisible: boolean, onClick: ()=> void, cont
 					</div>
 				)}
 			</div>
-		</div>
-  );
+		</Tag>
+	);
 };
 
 export default VideoCard;
