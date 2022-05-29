@@ -6,31 +6,31 @@ import Hero from "../components/VideoLibrary/Hero";
 import useScrollPosition from "../hooks/CurrentScrollPosition";
 import "../styles/global/scrollbarOverlay.module.scss";
 
-const VideoLibrary = React.memo((): JSX.Element => {
-    const scrollPosition = useScrollPosition();
-    const scrollbarIsVisible: boolean = scrollPosition > 500 ? false : true;
+const VideoLibrary = React.memo(() => {
+	const scrollPosition = useScrollPosition();
+	const scrollbarIsVisible: boolean = scrollPosition > 500 ? false : true;
 
-    return (
-      <>
-        <style jsx global>
-          { `
+	return (
+		<>
+			<style jsx global>
+				{`
 					html,
 					body {
 						overflow: overlay;
 					}
 					${scrollbarIsVisible &&
-            `	::-webkit-scrollbar {
+					`	::-webkit-scrollbar {
 						display: none;
 					}`}
 				`}
-        </style>
+			</style>
 
-        <NavigationBar />
-        <Hero />
-        <VideoGallery />
-        <Footer />
-      </>
-    );
-  });
+			<NavigationBar />
+			<Hero />
+			<VideoGallery />
+			<Footer />
+		</>
+	);
+});
 
 export default VideoLibrary;
