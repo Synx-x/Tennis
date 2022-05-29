@@ -37,11 +37,40 @@
 
 .galleryContainer{
     @include containerBase;
-    position: absolute;
-    left    : 0;
-    right   : 0;
-    z-index : 1;
+    max-width     : unset;
+    padding-inline: 18.2rem;
+    background    : linear-gradient(180deg, rgba(0,0,0,0.7315301120448179) 0%, rgba(255,255,255,0) 60%);
+    
+    @media (prefers-color-scheme: light) {
+        background: none;
+    }
 
+    position : absolute;
+    left     : 0;
+    right    : 0;
+    z-index  : 1;
+    animation: hideNav 5s forwards;
+
+    &:hover{
+        animation: showNav 500ms forwards;
+    }
+}
+
+@keyframes hideNav {
+    0%   {opacity: 1;}
+    90%  {opacity: 1;}
+    100%  {opacity: 0;}
+}
+
+@keyframes showNav {
+    0%   {opacity: 0;}
+    90%  {opacity: 0;}
+    100%  {opacity: 1;}
+}
+
+@keyframes disableNav {
+    0% {pointer-events: all;}
+    100% {pointer-events: none;}
 }
 
 .menuItems{

@@ -1,4 +1,5 @@
 import React from "react";
+import { setVideoState } from "../../hooks/GlobalState/CurrentVideoState";
 import styles from "../../styles/components/VideoGallery/Gallery.module.scss";
 import VideoCard from "../VideoCard";
 //import { rovingIndex } from "roving-ux";
@@ -15,6 +16,11 @@ const Gallery = () => {
 	//       );
 	//   }, []);
 
+	const HandleVideoCardClick = (videoId: number) => {
+		window.scrollTo(0, 0);
+		setVideoState(videoId);
+	};
+
 	return (
 		<div className={styles.container}>
 			<div className={styles.gallerySection}>
@@ -26,13 +32,13 @@ const Gallery = () => {
 					<li>
 						<VideoCard
 							buttonVisible={false}
-							onClick={() => window.scrollTo(0, 0)}
+							onClick={() => HandleVideoCardClick(1084537)}
 						/>
 					</li>
 					<li>
 						<VideoCard
 							buttonVisible={false}
-							onClick={() => window.scrollTo(0, 0)}
+							onClick={() => HandleVideoCardClick(707433769)}
 						/>
 					</li>
 					<li>
