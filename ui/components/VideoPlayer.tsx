@@ -3,20 +3,18 @@ import Vimeo from "@u-wave/react-vimeo";
 import { useAdminState } from "../hooks/GlobalState/CurrentVideoState";
 import Player from "@vimeo/player";
 import useScrollPosition from "../hooks/CurrentScrollPosition";
+import { constants } from "os";
 
 export default function VideoPlayer({ className }: { className: string }) {
-	const videoPlayerRef = useRef<any>(null);
 	const [error, setError] = useState<boolean>(false);
 	const scrollPosition = useScrollPosition();
-	let [videoState] = useAdminState("videoState");
-	console.log(scrollPosition);
+	const [videoState] = useAdminState("videoState");
+	const { isPlaying, videoId } = videoState;
 	const [player, setPlayer] = useState<Player | null>(null);
-
 	useEffect(() => {
 		if (player === null) return;
 
 		enterPictureInPicture();
-		console.log("entering Picture in Picture");
 	}, [scrollPosition > 500]);
 
 	useEffect(() => {
@@ -49,36 +47,32 @@ export default function VideoPlayer({ className }: { className: string }) {
 
 	return (
 		<>
-			{videoState.isPlaying ? (
+			{isPlaying ? (
 				<Vimeo
-					ref={videoPlayerRef}
-					className={className}
-					video={videoState.videoId}
-					autoplay={false}
+					loop
+					controls
 					pip={true}
-					responsive={true}
-					background={true}
-					color={"#0ece35"}
+					video={videoId}
+					autoplay={false}
+					showPortrait={false}
+					className={className}
+					showTitle={isPlaying ? true : false}
+					responsive={isPlaying ? false : true}
 					onError={() => setError(true)}
 					onReady={async (player: Player) => setPlayer(player)}
+					style={
+						isPlaying
+							? { height: "100%" }
+							: { pointerEvents: "none", userSelect: "none" }
+					}
 				/>
 			) : (
-				<Vimeo
-					ref={videoPlayerRef}
-					className={className}
-					style={{ pointerEvents: "none", userSelect: "none" }}
-					video={videoState.videoId}
-					autoplay={false}
-					responsive={true}
-					pip={true}
-					muted={true}
-					loop
-					controls={true}
-					showPortrait={false}
-					showTitle={false}
-					onError={() => setError(true)}
-					onReady={async (player: Player) => setPlayer(player)}
-				/>
+				<video autoPlay muted loop>
+					<source
+						src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
+						type="video/mp4"
+					/>
+				</video>
 			)}
 		</>
 	);
