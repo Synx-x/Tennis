@@ -13,33 +13,30 @@ export default function VideoPlayer({ className }: { className: string }) {
 	const [player, setPlayer] = useState<Player | null>(null);
 
 	useEffect(() => {
-		//setQuality();
-	}, [player !== null]);
-
-	useEffect(() => {
 		if (player === null) return;
 
-		enterPNP();
+		enterPictureInPicture();
 		console.log("entering Picture in Picture");
 	}, [scrollPosition > 500]);
 
 	useEffect(() => {
 		if (player === null) return;
 
-		exitPNP();
+		exitPictureInPicture();
 	}, [scrollPosition < 500]);
 
-	const enterPNP = async () => {
+	const enterPictureInPicture = async () => {
 		if (player === null) return;
 
-		await player.requestPictureInPicture();
+		if (!document.pictureInPictureEnabled) {
+			await player.requestPictureInPicture();
+		}
 	};
 
-	const exitPNP = async () => {
+	const exitPictureInPicture = async () => {
 		if (player === null) return;
 
 		if (document.pictureInPictureEnabled) {
-			console.log("exiting Picture in Picture");
 			await player.exitPictureInPicture();
 		}
 	};
@@ -50,10 +47,6 @@ export default function VideoPlayer({ className }: { className: string }) {
 		await player.setQuality("240p");
 	};
 
-	// if (videoPlayerRef.current !== null) {
-	// 	//videoPlayerRef.current.focus();
-	// 	videoPlayerRef.current.player.element.focus();
-	// }
 	return (
 		<>
 			{videoState.isPlaying ? (
@@ -61,9 +54,9 @@ export default function VideoPlayer({ className }: { className: string }) {
 					ref={videoPlayerRef}
 					className={className}
 					video={videoState.videoId}
-					autoplay={true}
+					autoplay={false}
 					pip={true}
-					responsive={false}
+					responsive={true}
 					background={true}
 					color={"#0ece35"}
 					onError={() => setError(true)}
@@ -75,9 +68,10 @@ export default function VideoPlayer({ className }: { className: string }) {
 					className={className}
 					style={{ pointerEvents: "none", userSelect: "none" }}
 					video={videoState.videoId}
-					autoplay={true}
-					responsive={false}
+					autoplay={false}
+					responsive={true}
 					pip={true}
+					muted={true}
 					loop
 					controls={true}
 					showPortrait={false}
