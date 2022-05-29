@@ -37,9 +37,9 @@
 
 .galleryContainer{
     @include containerBase;
-    max-width     : unset;
-    padding-inline: 18.2rem;
-    background    : linear-gradient(180deg, rgba(0,0,0,0.7315301120448179) 0%, rgba(255,255,255,0) 60%);
+    // max-width     : unset;
+    // padding-inline: 18.2rem;
+    //background    : linear-gradient(180deg, rgba(0,0,0,0.7315301120448179) 0%, rgba(255,255,255,0) 60%);
     
     @media (prefers-color-scheme: light) {
         background: none;

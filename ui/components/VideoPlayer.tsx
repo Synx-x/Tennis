@@ -10,16 +10,11 @@ export default function VideoPlayer({ className }: { className: string }) {
 	const scrollPosition = useScrollPosition();
 	let [videoState] = useAdminState("videoState");
 	console.log(scrollPosition);
-	let pictureInPictureWatcher: NodeJS.Timer;
 	const [player, setPlayer] = useState<Player | null>(null);
 
 	useEffect(() => {
-		if (videoPlayerRef.current !== null) {
-			//videoPlayerRef.current.element.focus();
-		}
-
-		//return clearInterval(pictureInPictureWatcher);
-	}, []);
+		//setQuality();
+	}, [player !== null]);
 
 	useEffect(() => {
 		if (player === null) return;
@@ -41,14 +36,18 @@ export default function VideoPlayer({ className }: { className: string }) {
 	};
 
 	const exitPNP = async () => {
-		//if (player === null) return;
+		if (player === null) return;
 
 		if (document.pictureInPictureEnabled) {
 			console.log("exiting Picture in Picture");
-			debugger;
-			document.exitPictureInPicture();
+			await player.exitPictureInPicture();
 		}
-		//await player.exitPictureInPicture();
+	};
+
+	const setQuality = async () => {
+		if (player === null) return;
+
+		await player.setQuality("240p");
 	};
 
 	// if (videoPlayerRef.current !== null) {
@@ -57,16 +56,32 @@ export default function VideoPlayer({ className }: { className: string }) {
 	// }
 	return (
 		<>
-			{error ? null : (
+			{videoState.isPlaying ? (
 				<Vimeo
 					ref={videoPlayerRef}
 					className={className}
 					video={videoState.videoId}
 					autoplay={true}
 					pip={true}
-					responsive={true}
+					responsive={false}
 					background={true}
 					color={"#0ece35"}
+					onError={() => setError(true)}
+					onReady={async (player: Player) => setPlayer(player)}
+				/>
+			) : (
+				<Vimeo
+					ref={videoPlayerRef}
+					className={className}
+					style={{ pointerEvents: "none", userSelect: "none" }}
+					video={videoState.videoId}
+					autoplay={true}
+					responsive={false}
+					pip={true}
+					loop
+					controls={true}
+					showPortrait={false}
+					showTitle={false}
 					onError={() => setError(true)}
 					onReady={async (player: Player) => setPlayer(player)}
 				/>
