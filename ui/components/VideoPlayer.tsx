@@ -3,7 +3,6 @@ import Vimeo from "@u-wave/react-vimeo";
 import { useAdminState } from "../hooks/GlobalState/CurrentVideoState";
 import Player from "@vimeo/player";
 import useScrollPosition from "../hooks/CurrentScrollPosition";
-import { constants } from "os";
 
 export default function VideoPlayer({ className }: { className: string }) {
 	const [error, setError] = useState<boolean>(false);

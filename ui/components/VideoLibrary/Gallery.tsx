@@ -4,6 +4,18 @@ import styles from "../../styles/components/VideoGallery/Gallery.module.scss";
 import VideoCard from "../VideoCard";
 //import { rovingIndex } from "roving-ux";
 
+export async function getStaticProps() {
+	let res = await fetch("http://vimeo.com/api/v2/user178581340/videos.json");
+	let vimeoRes = await res.json();
+	console.log("a res", vimeoRes);
+
+	return {
+		videos: {
+			vimeoRes,
+		},
+	};
+}
+
 const Gallery = () => {
 	//   useEffect(() => {
 	//     document
@@ -15,6 +27,18 @@ const Gallery = () => {
 	//         })
 	//       );
 	//   }, []);
+
+	let videos = null;
+
+	const getVideos = async () => {
+		const res = await fetch(
+			"http://vimeo.com/api/v2/user178581340/videos.json"
+		);
+		videos = await res.json();
+	};
+
+	getVideos();
+	console.log("in func", videos);
 
 	const HandleVideoCardClick = (videoId: number) => {
 		window.scrollTo(0, 0);
@@ -32,7 +56,7 @@ const Gallery = () => {
 					<li>
 						<VideoCard
 							buttonVisible={false}
-							onClick={() => HandleVideoCardClick(1084537)}
+							onClick={() => HandleVideoCardClick(721537475)}
 						/>
 					</li>
 					<li>

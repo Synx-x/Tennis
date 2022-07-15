@@ -20,12 +20,10 @@ const VideoCard = (videoCard: { buttonVisible: boolean, onClick: ()=> void, cont
 			}
 		>
 			<div className={styles.cardSnippet}>
-				<video autoPlay muted loop>
-					<source
-						src="https://www.w3schools.com/html/mov_bbb.mp4"
-						type="video/mp4"
-					/>
-				</video>
+				<img
+					src="https://i.vimeocdn.com/video/1453068902-1b433d1a0a60efe9e3741442a20485628b180cd5676db2388517bf5d3bb7de82-d_640"
+					alt=""
+				/>
 			</div>
 			<div
 				className={
