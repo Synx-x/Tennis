@@ -51,7 +51,7 @@
     z-index  : 1;
     animation: hideNav 5s forwards;
 
-    &:hover{
+    &:hover, &:focus, &:focus-within{
         animation: showNav 500ms forwards;
     }
 }
