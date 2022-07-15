@@ -97,72 +97,72 @@ jobs:
           user_name: 'GitHub Action'
           user_email: 'action@github.com'
 
-  deploy_via_ssh:
-    needs: push_to_registry
-    runs-on: ubuntu-20.04
-    if: ${{ github.event.workflow_run.conclusion != 'failure' }}
-    steps:
+#  deploy_via_ssh:
+ #   needs: push_to_registry
+  #  runs-on: ubuntu-20.04
+   # if: ${{ github.event.workflow_run.conclusion != 'failure' }}
+    #steps:
       # Checkout latest or specific tag
-      - name: checkout
-        if: ${{ github.event.inputs.version == '' || github.event.inputs.version == 'latest' }}
-        uses: actions/checkout@v2
-      - name: checkout tag
-        if: ${{ github.event.inputs.version != '' && github.event.inputs.version != 'latest' }}
-        uses: actions/checkout@v2
-        with:
-          ref: refs/tags/${{ github.event.inputs.version }}
+     # - name: checkout
+      #  if: ${{ github.event.inputs.version == '' || github.event.inputs.version == 'latest' }}
+       # uses: actions/checkout@v2
+      #- name: checkout tag
+      #  if: ${{ github.event.inputs.version != '' && github.event.inputs.version != 'latest' }}
+      #  uses: actions/checkout@v2
+      #  with:
+      #    ref: refs/tags/${{ github.event.inputs.version }}
 
       # Assign environment variables used in subsequent steps
-      - name: repository name fix and env
-        run: |
-          echo "image_repository_name=$(echo ${{ github.repository }} | tr '[:upper:]' '[:lower:]')" >> $GITHUB_ENV
-          echo "TAG_NAME=latest" >> $GITHUB_ENV
-          if [ "${{ github.event.release.tag_name }}" != "" ]; then
-            echo "TAG_NAME=${{ github.event.release.tag_name }}" >> $GITHUB_ENV
-          fi;
-          if [ "${{ github.event.inputs.version }}" != "" ]; then
-            echo "TAG_NAME=${{ github.event.inputs.version }}" >> $GITHUB_ENV
-          fi;
+     # - name: repository name fix and env
+     #   run: |
+     #     echo "image_repository_name=$(echo ${{ github.repository }} | tr '[:upper:]' '[:lower:]')" >> $GITHUB_ENV
+     #     echo "TAG_NAME=latest" >> $GITHUB_ENV
+     #     if [ "${{ github.event.release.tag_name }}" != "" ]; then
+     #       echo "TAG_NAME=${{ github.event.release.tag_name }}" >> $GITHUB_ENV
+     #     fi;
+     #     if [ "${{ github.event.inputs.version }}" != "" ]; then
+      #      echo "TAG_NAME=${{ github.event.inputs.version }}" >> $GITHUB_ENV
+      #    fi;
 
       # Populate docker-compose.yml with variables from build process, including TAG_NAME.
-      - name: docker-compose file prep
-        uses: danielr1996/envsubst-action@1.1.0
-        env:
-          RELEASE_VERSION: ${{ env.TAG_NAME }}
-          IMAGE_REPO: ${{ env.image_repository_name }}
-          APP_NAME: ${{ github.event.repository.name }}
-          HOST_DOMAIN: ${{ secrets.DEPLOY_API }}
-          LETSENCRYPT_EMAIL: ${{ secrets.LETSENCRYPT_EMAIL }}
-          DEPLOY_API: ${{ secrets.DEPLOY_API }}
-          DEPLOY_CDN: ${{ secrets.DEPLOY_CDN }}
-        with:
-          input: .deploy/docker-compose-template.yml
-          output: .deploy/${{ github.event.repository.name }}-docker-compose.yml
+     # - name: docker-compose file prep
+     #   uses: danielr1996/envsubst-action@1.1.0
+     #   env:
+     #     RELEASE_VERSION: ${{ env.TAG_NAME }}
+     #     IMAGE_REPO: ${{ env.image_repository_name }}
+     #     APP_NAME: ${{ github.event.repository.name }}
+     #     HOST_DOMAIN: ${{ secrets.DEPLOY_API }}
+     #     LETSENCRYPT_EMAIL: ${{ secrets.LETSENCRYPT_EMAIL }}
+     #     DEPLOY_API: ${{ secrets.DEPLOY_API }}
+     #     DEPLOY_CDN: ${{ secrets.DEPLOY_CDN }}
+     #   with:
+     #     input: .deploy/docker-compose-template.yml
+     #     output: .deploy/${{ github.event.repository.name }}-docker-compose.yml
 
       # Copy only the docker-compose.yml to remote server home folder
-      - name: copy compose file via scp
-        uses: appleboy/scp-action@v0.1.1
-        with:
-          host: ${{ secrets.DEPLOY_API }}
-          username: ${{ secrets.DEPLOY_USERNAME }}
-          password: ${{ secrets.DEPLOY_PASSWORD }}
-          port: 22
-          source: ".deploy/${{ github.event.repository.name }}-docker-compose.yml"
-          target: "~/"
+     # - name: copy compose file via scp
+     #   uses: appleboy/scp-action@v0.1.1
+     #   with:
+     #     host: ${{ secrets.DEPLOY_API }}
+     #     username: ${{ secrets.DEPLOY_USERNAME }}
+     #     password: ${{ secrets.DEPLOY_PASSWORD }}
+     #     port: 22
+     #    source: ".deploy/${{ github.event.repository.name }}-docker-compose.yml"
+     #     target: "~/"
 
       # Deploy Docker image with ServiceStack application using `docker compose up` remotely
-      - name: remote docker-compose up via ssh
-        uses: appleboy/ssh-action@v0.1.4
-        env:
-          APPTOKEN: ${{ secrets.CR_PAT }}
-          USERNAME: ${{ secrets.DEPLOY_USERNAME }}
-        with:
-          host: ${{ secrets.DEPLOY_API }}
-          username: ${{ secrets.DEPLOY_USERNAME }}
-          password: ${{ secrets.DEPLOY_PASSWORD }}
-          port: 22
-          envs: APPTOKEN,USERNAME
-          script: |
-            echo $APPTOKEN | docker login ghcr.io -u $USERNAME --password-stdin
-            docker-compose -f ~/.deploy/${{ github.event.repository.name }}-docker-compose.yml pull
-            docker-compose -f ~/.deploy/${{ github.event.repository.name }}-docker-compose.yml up -d
+     # - name: remote docker-compose up via ssh
+     #   uses: appleboy/ssh-action@v0.1.4
+     #   env#:
+     #     APPTOKEN: ${{ secrets.CR_PAT }}
+     #     USERNAME: ${{ secrets.DEPLOY_USERNAME }}
+     #   with:
+     #     host: ${{ secrets.DEPLOY_API }}
+     #     username: ${{ secrets.DEPLOY_USERNAME }}
+     #     password: ${{ secrets.DEPLOY_PASSWORD }}
+     #     port: 22
+     #     envs: APPTOKEN,USERNAME
+     #     script: |
+     #       echo $APPTOKEN | docker login ghcr.io -u $USERNAME --password-stdin
+     #       docker-compose -f ~/.deploy/${{ github.event.repository.name }}-docker-compose.yml pull
+     #       docker-compose -f ~/.deploy/${{ github.event.repository.name }}-docker-compose.yml up -d
