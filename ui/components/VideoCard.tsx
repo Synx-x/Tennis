@@ -2,9 +2,16 @@ import React from "react";
 import styles from "../styles/components/VideoCard.module.scss";
 import { locationContext } from "../types/types";
 
-const VideoCard = (videoCard: { buttonVisible: boolean, onClick: ()=> void, context?:locationContext }) => {
-	
-  const { context, buttonVisible, onClick } = videoCard;
+const VideoCard = (videoCard: {
+	buttonVisible: boolean;
+	onClick: () => void;
+	context?: locationContext;
+	img: string;
+	title: string;
+	description: string;
+}) => {
+	const { context, buttonVisible, onClick, img, title, description } =
+		videoCard;
 
 	const tagType = context === "Home" ? "div" : "button";
 
@@ -20,10 +27,7 @@ const VideoCard = (videoCard: { buttonVisible: boolean, onClick: ()=> void, cont
 			}
 		>
 			<div className={styles.cardSnippet}>
-				<img
-					src="https://i.vimeocdn.com/video/1453068902-1b433d1a0a60efe9e3741442a20485628b180cd5676db2388517bf5d3bb7de82-d_640"
-					alt=""
-				/>
+				<img src={img} alt={title} />
 			</div>
 			<div
 				className={
@@ -31,10 +35,8 @@ const VideoCard = (videoCard: { buttonVisible: boolean, onClick: ()=> void, cont
 				}
 			>
 				<div>
-					<h3>Intro to Tennis Equipment</h3>
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit.
-					</p>
+					<h3>{title}</h3>
+					<p>{description}</p>
 				</div>
 				{buttonVisible && (
 					<div>

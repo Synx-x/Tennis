@@ -20,3 +20,12 @@ export function sanitizeForUi(dto:any) {
     })
     return dto
 }
+export const objectToArray = (obj: any) => {
+	let array = [];
+
+	for (let key in obj) {
+		array.push([key, obj[key]]);
+	}
+
+	return array;
+};
