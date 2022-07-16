@@ -63,13 +63,14 @@ function Gallery({ data }: { data: vimeoData }) {
 			<div className={styles.container}>
 				<div className={styles.gallerySection}>
 					<header>
-						<h2>Intro to Tennis Equipment</h2>
+						<h2>Get Started</h2>
 					</header>
 
 					<ul className={styles.horizontalMediaScroller}>
-						{objectToArray(videos).map(
-							(video: any, index) => {
-								console.log(video)
+						{objectToArray(videos)
+							.reverse()
+							.map((video: any, index) => {
+								console.log(video);
 								return (
 									<li>
 										<VideoCard
@@ -85,12 +86,11 @@ function Gallery({ data }: { data: vimeoData }) {
 										/>
 									</li>
 								);
-							}
-						)}
+							})}
 					</ul>
 				</div>
 
-				<div className={styles.gallerySection}>
+				{/* <div className={styles.gallerySection}>
 					<header>
 						<h2>Basic Form</h2>
 					</header>
@@ -238,7 +238,7 @@ function Gallery({ data }: { data: vimeoData }) {
 							/>
 						</li>
 					</ul>
-				</div>
+				</div> */}
 			</div>
 		);
 	}
