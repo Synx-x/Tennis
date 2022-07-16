@@ -4,11 +4,24 @@ import NavigationBar from "../components/NavigationBar";
 import VideoGallery from "../components/VideoLibrary/Gallery";
 import Hero from "../components/VideoLibrary/Hero";
 import useScrollPosition from "../hooks/CurrentScrollPosition";
+import { setVideoData } from "../hooks/GlobalState/VideoData";
 import "../styles/global/scrollbarOverlay.module.scss";
+import { vimeoData } from "../types/types";
 
-const VideoLibrary = React.memo(() => {
+export const getStaticProps = async () => {
+	const res = await fetch(
+		`http://vimeo.com/api/v2/user178581340/videos.json`
+	);
+	const data = await res.json();
+	return {
+		props: { data },
+	};
+};
+
+const VideoLibrary = React.memo(({ data }: { data: vimeoData[] }) => {
 	const scrollPosition = useScrollPosition();
 	const scrollbarIsVisible: boolean = scrollPosition > 500 ? false : true;
+	setVideoData(data);
 
 	return (
 		<>
