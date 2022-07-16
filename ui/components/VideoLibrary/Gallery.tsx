@@ -50,7 +50,7 @@ const getVideos = async () => {
 };
 
 getVideos();
-function Gallery({ data }: { data: vimeoData }) {
+function Gallery() {
 	const HandleVideoCardClick = (videoId: number) => {
 		window.scrollTo(0, 0);
 		setVideoState(videoId);
