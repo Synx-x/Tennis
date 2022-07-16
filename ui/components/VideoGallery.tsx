@@ -11,17 +11,25 @@ const VideoGallery = () => {
 			<div className={styles.galleryContent}>
 				<VideoCard
 					buttonVisible={true}
-					onClick={() => window.scrollTo(0, 0)}
-					context="Home"
-				/>
-
-				<VideoCard
-					buttonVisible={true}
+					img={""}
+					title=""
+					description=""
 					onClick={() => window.scrollTo(0, 0)}
 					context="Home"
 				/>
 				<VideoCard
 					buttonVisible={true}
+					img={""}
+					title=""
+					description=""
+					onClick={() => window.scrollTo(0, 0)}
+					context="Home"
+				/>
+				<VideoCard
+					buttonVisible={true}
+					img={""}
+					title=""
+					description=""
 					onClick={() => window.scrollTo(0, 0)}
 					context="Home"
 				/>
