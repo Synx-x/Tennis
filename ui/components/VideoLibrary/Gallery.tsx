@@ -17,7 +17,7 @@ function Gallery() {
 		<div className={styles.container}>
 			<div className={styles.gallerySection}>
 				<header>
-					<h2>Get Started</h2>
+					<h2>Obstacle Challenges</h2>
 				</header>
 
 				<ul className={styles.horizontalMediaScroller}>
@@ -41,76 +41,19 @@ function Gallery() {
 				</ul>
 			</div>
 
-			{/* <div className={styles.gallerySection}>
+			<div className={styles.gallerySection}>
 				<header>
-					<h2>Basic Form</h2>
+					<h2>Groundstrokes: Forehand </h2>
 				</header>
 
 				<ul className={styles.horizontalMediaScroller}>
 					<li>
 						<VideoCard
 							buttonVisible={false}
-							onClick={() => window.scrollTo(0, 0)}
-						/>
-					</li>
-					<li>
-						<VideoCard
-							buttonVisible={false}
-							onClick={() => window.scrollTo(0, 0)}
-						/>
-					</li>
-					<li>
-						<VideoCard
-							buttonVisible={false}
-							onClick={() => window.scrollTo(0, 0)}
-						/>
-					</li>
-					<li>
-						<VideoCard
-							buttonVisible={false}
-							onClick={() => window.scrollTo(0, 0)}
-						/>
-					</li>
-					<li>
-						<VideoCard
-							buttonVisible={false}
-							onClick={() => window.scrollTo(0, 0)}
-						/>
-					</li>
-					<li>
-						<VideoCard
-							buttonVisible={false}
-							onClick={() => window.scrollTo(0, 0)}
-						/>
-					</li>
-					<li>
-						<VideoCard
-							buttonVisible={false}
-							onClick={() => window.scrollTo(0, 0)}
-						/>
-					</li>
-					<li>
-						<VideoCard
-							buttonVisible={false}
-							onClick={() => window.scrollTo(0, 0)}
-						/>
-					</li>
-					<li>
-						<VideoCard
-							buttonVisible={false}
-							onClick={() => window.scrollTo(0, 0)}
-						/>
-					</li>
-					<li>
-						<VideoCard
-							buttonVisible={false}
-							onClick={() => window.scrollTo(0, 0)}
-						/>
-					</li>
-					<li>
-						<VideoCard
-							buttonVisible={false}
-							onClick={() => window.scrollTo(0, 0)}
+							img={""}
+							title={"Forehands, bounce and hit"}
+							description={""}
+							onClick={() => HandleVideoCardClick(0)}
 						/>
 					</li>
 				</ul>
@@ -118,78 +61,75 @@ function Gallery() {
 
 			<div className={styles.gallerySection}>
 				<header>
-					<h2>Equipment</h2>
+					<h2>Groundstrokes: Backhand </h2>
 				</header>
 
 				<ul className={styles.horizontalMediaScroller}>
 					<li>
 						<VideoCard
 							buttonVisible={false}
-							onClick={() => window.scrollTo(0, 0)}
-						/>
-					</li>
-					<li>
-						<VideoCard
-							buttonVisible={false}
-							onClick={() => window.scrollTo(0, 0)}
-						/>
-					</li>
-					<li>
-						<VideoCard
-							buttonVisible={false}
-							onClick={() => window.scrollTo(0, 0)}
-						/>
-					</li>
-					<li>
-						<VideoCard
-							buttonVisible={false}
-							onClick={() => window.scrollTo(0, 0)}
-						/>
-					</li>
-					<li>
-						<VideoCard
-							buttonVisible={false}
-							onClick={() => window.scrollTo(0, 0)}
-						/>
-					</li>
-					<li>
-						<VideoCard
-							buttonVisible={false}
-							onClick={() => window.scrollTo(0, 0)}
-						/>
-					</li>
-					<li>
-						<VideoCard
-							buttonVisible={false}
-							onClick={() => window.scrollTo(0, 0)}
-						/>
-					</li>
-					<li>
-						<VideoCard
-							buttonVisible={false}
-							onClick={() => window.scrollTo(0, 0)}
-						/>
-					</li>
-					<li>
-						<VideoCard
-							buttonVisible={false}
-							onClick={() => window.scrollTo(0, 0)}
-						/>
-					</li>
-					<li>
-						<VideoCard
-							buttonVisible={false}
-							onClick={() => window.scrollTo(0, 0)}
-						/>
-					</li>
-					<li>
-						<VideoCard
-							buttonVisible={false}
-							onClick={() => window.scrollTo(0, 0)}
+							img={""}
+							title={"Backhand Demonstration"}
+							description={""}
+							onClick={() => HandleVideoCardClick(0)}
 						/>
 					</li>
 				</ul>
-			</div> */}
+			</div>
+
+			<div className={styles.gallerySection}>
+				<header>
+					<h2>Volleys </h2>
+				</header>
+
+				<ul className={styles.horizontalMediaScroller}>
+					<li>
+						<VideoCard
+							buttonVisible={false}
+							img={""}
+							title={"Forehand and Backhand Volleys"}
+							description={""}
+							onClick={() => HandleVideoCardClick(0)}
+						/>
+					</li>
+				</ul>
+			</div>
+
+			<div className={styles.gallerySection}>
+				<header>
+					<h2>Serves </h2>
+				</header>
+
+				<ul className={styles.horizontalMediaScroller}>
+					<li>
+						<VideoCard
+							buttonVisible={false}
+							img={""}
+							title={"Trick Shot 1"}
+							description={""}
+							onClick={() => HandleVideoCardClick(0)}
+						/>
+					</li>
+				</ul>
+			</div>
+
+			<div className={styles.gallerySection}>
+				<header>
+					<h2>SLO-MO with Targets </h2>
+				</header>
+
+				<ul className={styles.horizontalMediaScroller}>
+					<li>
+						<VideoCard
+							buttonVisible={false}
+							img={""}
+							title={"Slo-mo Forehand"}
+							description={""}
+							onClick={() => HandleVideoCardClick(0)}
+						/>
+					</li>
+				</ul>
+			</div>
 		</div>
 	);
 }
