@@ -22,7 +22,7 @@ const VideoLibrary = React.memo(({ data }: { data: vimeoData[] }) => {
 	const scrollPosition = useScrollPosition();
 	const scrollbarIsVisible: boolean = scrollPosition > 500 ? false : true;
 	setVideoData(data);
-
+	//console.log(data)
 	return (
 		<>
 			<style jsx global>
