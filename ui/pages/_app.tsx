@@ -1,7 +1,11 @@
 import { AppProps } from "next/app"
 import "../styles/index.scss";
+import "../styles/vendors/open-props-normalize.css";
 import "open-props/style";
-import "open-props/normalize";
+
+//uncomment whenever client wants light or dark mode feature or whenever prefers color scheme gets a js api toggle 👀
+//import "open-props/normalize";
+
 
 // import { useApp } from "../lib/gateway"
 // import { useEffect } from "react";

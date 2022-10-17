@@ -7,7 +7,7 @@ const Hero = () => {
 			<div className={styles.heroContainer}>
 				<section className={styles.heroText}>
 					<h1>Welcome to Stephens Tennis Academy</h1>
-					<h2>Catchy Slogan Goes Here</h2>
+					<h2>Tennis practice, at home, anytime!</h2>
 				</section>
 
 				<section className={styles.heroGraphic}>

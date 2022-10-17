@@ -1,6 +1,10 @@
 @import './global/_normalize.scss';
 @import './componentPartials/systemComponents/scrollbar';
 
+:root {
+  color-scheme: light dark;
+}
+
 html{
     --gray-9: #0d0e0e;
     --green-8: #0ece35;
