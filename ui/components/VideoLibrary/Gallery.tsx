@@ -20,7 +20,7 @@ function Gallery() {
 		<div className={styles.container}>
 			<div className={styles.gallerySection}>
 				<header>
-					<h2>Obstacle Challenges</h2>
+					<h2>Learn With Steve!</h2>
 				</header>
 
 				<ul className={styles.horizontalMediaScroller}>

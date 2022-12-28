@@ -3,9 +3,15 @@ import styles from "../styles/components/Testimonials.module.scss";
 import TestimonialCard from "./TestimonialCard";
 
 let comment = [
-  { Jane: "My youngest daughter started sessions with Steve towards the end of 2021. Within 4 weeks, she was playing beautiful tennis. We constantly get compliments about how much she's approved in her tennis, but these compliments should all go to Steve! Anyone that knows Steve will agree, he is the most amazing, funny and positive coach around! He will always build his students up in such a way.  He is absolutely amazing with kids." },
-  { Roxy: "Steve coaches my 3 boys. He is always patient, energetic, encouraging and firm. He teaches and reaches each one of my boys at their individual level. He’s the one in a million special kind of coach!" },
-  { Tracy: "Steve is a fun and encouraging coach that shares hes passion for the game with his students. My kids really love and look forward to their tennis lessons!" },
+	{
+		Jane: "Our youngest daughter has made incredible progress in her tennis thanks to Steve's coaching! He's an amazing, positive coach who is great with kids. We've received so many compliments on her improvement and we know Steve deserves all the credit. If you know Steve, you'll agree that he's the best coach around!",
+	},
+	{
+		Roxy: "Steve coaches my 3 boys. He is always patient, energetic, encouraging and firm. He teaches and reaches each one of my boys at their individual level. He’s the one in a million special kind of coach!",
+	},
+	{
+		Tracy: "Steve is a fun and encouraging coach that shares hes passion for the game with his students. My kids really love and look forward to their tennis lessons!",
+	},
 ];
 
 

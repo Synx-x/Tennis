@@ -67,10 +67,7 @@ export default function VideoPlayer({ className }: { className: string }) {
 				/>
 			) : (
 				<video autoPlay muted loop>
-					<source
-						src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
-						type="video/mp4"
-					/>
+					<source src="https://imgur.com/0OE7UWq.mp4" type="video/mp4" />
 				</video>
 			)}
 		</>
