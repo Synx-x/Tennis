@@ -5,17 +5,26 @@
   
   --containerBackground: linear-gradient(to bottom, hsl(0deg, 0%, 40%), hsl(0deg, 0%, 20%));
 
-  display  : flex;
-  height   : calc(60.0625rem - 3.75rem - .375rem);
-  width    : 100%;
-  max-width: 1900px;
-  margin   : 0 auto;
-  padding  : var(--size-fluid-3);
+  display         : flex;
+  height          : calc(60.0625rem - 3.75rem - .375rem);
+  background-image: url(../../public/assets/img/tennis-scene.jpg);
+  background-size : cover;
+  width           : 100%;
+  max-width       : 1900px;
+  margin          : 0 auto;
+  padding         : var(--size-fluid-3);
+  position        : relative;
+
+  &::after{
+    position  : absolute;
+    content   : "";
+    inset     : 0;
+    background: linear-gradient(180deg, rgba(248,249,250,1) 0%, rgba(121,9,9,0) 10%);
+  }
 
   section {
     display        : flex;
     align-items    : center;
-    justify-content: center;
     width          : 100%;
   }
 

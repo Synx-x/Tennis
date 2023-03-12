@@ -7,7 +7,8 @@
     max-width       : 2440px;
     flex-direction  : column;
     justify-content : space-around;
-    background-image: url('../../public/assets/img/TennisPlayer.svg');
+    background-image: url('../../public/assets/img/tennis-player.png');
+    background-size : contain;
 }
 
 .galleryHeader{
