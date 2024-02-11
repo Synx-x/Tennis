@@ -7,11 +7,13 @@
     cursor          : pointer;
     background-color: var(--green-8);
     color           : white;
-    border-radius   : var(--radius-round);
-    transition      : transform .2s ease-in-out;
+    border-radius   : var(--border-radius-5);
+    transition      : all 0.5s ease-in;
     padding         : 1.5rem;
+    border: 1px solid var(--green-8);
 
     &:hover {
-        transform: scale(1.1);
+        background-color: white;
+        color: var(--green-8);
     }
 }

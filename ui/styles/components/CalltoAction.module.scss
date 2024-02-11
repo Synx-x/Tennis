@@ -3,9 +3,10 @@
 
 .actionContainer{
     display        : flex;
-    height         : 48rem;
+    height         : 45rem;
     flex-direction : column;
     justify-content: space-evenly;
+    background: linear-gradient(0.55turn, #f8f9fa, #f8f9fa, #0ece35a8);
 }
 
 .actionHeader{
@@ -16,13 +17,14 @@
 
     h2{
         @include heading(h2);
+        text-transform: uppercase;
     }
 }
 
 .actionActions{
     display        : flex;
     justify-content: center;
-    gap            : 1rem;
+    gap            : 20px;
 
     button{
         @include button();

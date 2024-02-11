@@ -6,7 +6,7 @@
   flex-direction  : column;
   min-height      : 300px;
   aspect-ratio    : 16 / 9;
-  width           : 100%;
+  width           : 480px;
   border-radius   : var(--radius-3);
   box-shadow      : var(--shadow-3);
   background-color: var(--surface-1);
@@ -96,6 +96,7 @@
   .homeCardContainer{
     @include cardContainer;
     min-height: unset;
+    width: 100%;
   }
 
   .homeCardInfo {

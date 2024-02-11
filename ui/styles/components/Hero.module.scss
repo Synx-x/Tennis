@@ -8,6 +8,7 @@
   display         : flex;
   height          : calc(60.0625rem - 3.75rem - .375rem);
   background-image: url(../../public/assets/img/tennis-scene.jpg);
+  background-position: top;
   background-size : cover;
   width           : 100%;
   max-width       : 1900px;
@@ -77,16 +78,27 @@
     @include heading(h1);
     text-align: center;
     color     : var(--green-8);
+    text-shadow: 0px 1px 8px white;
   }
 
   h2 {
     @include heading(h2);
+    font-weight: 600 !important;
     text-align: center;
+    color: black;
+    text-shadow: 0px 1px 5px white;
     font-size : var(--font-size-fluid-1);
   }
 }
 
 @media (max-width: 850px) {
+  .heroText {
+
+    h1 {
+      text-shadow: 0px 1px 2px white;
+    }
+  }
+
   .heroContainer {
     flex-direction : column-reverse;
     justify-content: space-evenly;
