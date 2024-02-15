@@ -1,9 +1,10 @@
-import { NextRouter, useRouter } from "next/router";
-import React, { useLayoutEffect, useState } from "react";
-import hamburgerStyles from "./../styles/components/HamburgerMenu.module.scss";
-import styles from "./../styles/components/NavigationBar.module.scss";
-import Hamburger from "./HamburgerMenu/Hamburger";
-import Menu from "./HamburgerMenu/Menu";
+import { NextRouter, useRouter } from 'next/router';
+import React, { useLayoutEffect, useState } from 'react';
+import hamburgerStyles from './../styles/components/HamburgerMenu.module.scss';
+import styles from './../styles/components/NavigationBar.module.scss';
+import Hamburger from './HamburgerMenu/Hamburger';
+import Menu from './HamburgerMenu/Menu';
+import Image from 'next/image';
 
 const NavigationBar = () => {
 	const router: NextRouter = useRouter();
@@ -26,29 +27,34 @@ const NavigationBar = () => {
 
 	return (
 		<nav
-			className={
-				router.pathname === "/videolibrary"
-					? styles.galleryContainer
-					: styles.container
-			}
+			className={router.pathname === '/videolibrary' ? styles.galleryContainer : styles.container}
 		>
 			<ul>
 				<li>
-					<a href="/">logo</a>
+					<a className={styles.logoImage} href='/'>
+						<Image
+							src='/assets/img/tennis_logo_transparent.png'
+							alt='Tennis Academy'
+							layout='fill'
+						/>
+					</a>
 				</li>
 				{currentWidth > mobileBreakPoint ? (
 					<>
 						<div className={styles.menuItems}>
 							<li>
-								<a href="/">Home</a>
+								<a href='/'>Home</a>
 							</li>
 							<li>
-								<a href="/videolibrary">Video Library</a>
+								<a href='/videolibrary'>Video Library</a>
 							</li>
 						</div>
-						<li>
-							<button>Login</button>
-						</li>
+
+						<div className={styles.logoContainer}>
+							<li>
+								<button>Login</button>
+							</li>
+						</div>
 					</>
 				) : (
 					<>
@@ -63,12 +69,10 @@ const NavigationBar = () => {
 								isOpen
 									? {
 											transform:
-												"translate(-" +
+												'translate(-' +
 												// keeps the button exactly translated to the start when open
-												(window.innerWidth -
-													navbarContainerPadding -
-													hamburgerButtonSize) +
-												"px )",
+												(window.innerWidth - navbarContainerPadding - hamburgerButtonSize) +
+												'px )',
 									  }
 									: {}
 							}

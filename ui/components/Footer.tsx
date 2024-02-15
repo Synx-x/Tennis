@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from '../styles/components/Footer.module.scss';
+import Image from 'next/image';
 
 const Footer = () => {
 	return (
@@ -14,7 +15,14 @@ const Footer = () => {
 					</p>
 				</div>
 				<footer className={styles.footerMain}>
-					<a href='/'>Logo</a>
+					<a href='/'>
+						<Image
+							src='/assets/img/tennis_logo_transparent.png'
+							alt='Tennis Academy'
+							width={110}
+							height={110}
+						/>
+					</a>
 					<p>© 2022 Stephen Cross. All Rights Reserved. </p>
 					<menu>
 						<li>Facebook</li>

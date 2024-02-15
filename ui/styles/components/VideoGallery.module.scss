@@ -16,11 +16,18 @@
     background-position-x: left;
     position: relative;
 
-    &::before{
+    // &::before{
+    //     position  : absolute;
+    //     content   : "";
+    //     inset     : 0;
+    //     background: linear-gradient(180deg, #fefefe6e, transparent);
+    // }
+    
+    &::after {
         position  : absolute;
         content   : "";
         inset     : 0;
-        background: linear-gradient(180deg, #fefefe, transparent);
+        background: linear-gradient(0.06turn, #f8f9fa00, #f8f9fa00, rgb(14 206 53 / 27%));
     }
 }
 
@@ -32,11 +39,11 @@
     margin-top    : 5rem;
     z-index: 10;
     max-width: 1550px;
-    padding: 0px 25px;
+    padding: 0px 30px;
     
     h2{
         text-transform: capitalize;
-        font-weight: 500;
+        font-weight: 700;
         letter-spacing: 2px;
         // text-shadow: 2px 2px 2px black;
         // color: var(--yellow-something);
