@@ -91,12 +91,27 @@
   @include cardInfo;
 }
 
+.homeCardContainer{
+  margin-right: 15px;
+  margin-left: 15px;
+  margin-bottom: 20px !important;
+  @include cardContainer;
+}
+
+@media (max-width: 1100px) {
+
+  .homeCardContainer{
+    margin: auto;
+    width: 550px;
+  }
+}
+
 @media (max-width: 850px) {
 
   .homeCardContainer{
     @include cardContainer;
     min-height: unset;
-    width: 100%;
+    width: 95%;
   }
 
   .homeCardInfo {
@@ -126,11 +141,6 @@
 }
 
 @media (min-width: 850px) {
-  
-  .homeCardContainer{
-    @include cardContainer;
-  }
-
   .cardContainer {
     &:hover {
       box-shadow: var(--shadow-4);
